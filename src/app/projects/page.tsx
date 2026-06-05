@@ -1,20 +1,24 @@
 import Link from "next/link";
 
-export const metadata = { title: "Projects - Lily Liang Portfolio" };
+export const metadata = {
+  title: "Projects - Lily Liang Portfolio",
+  description:
+    "Selected work by Lily Liang — UX, physical product design, and AI-driven systems projects from 2022–2026.",
+};
 
 const SELECTED = [
-  { href: "/projects/little-autonomy", title: "Little Autonomy", year: "Fall 2025 – Spring 2026", cover: "/images/cover-little-autonomy.webp", desc: <>Interaction design empowering children&apos;s independence — systems that support self-directed decision-making in everyday life.</>, tags: ["Interaction Design", "UX Research"] },
-  { href: "/projects/circa",            title: "Circa",            year: "Spring 2025", cover: "/images/cover-circa.png",          desc: <>A text-based, AI-powered pregnancy support platform built with Penn Medicine — meeting patients where they are, <i style={{ fontFamily: "var(--emphasis)", fontWeight: 700, fontStyle: "italic" }}>when they need it most</i>.</>, tags: ["Product Design", "AI", "Healthcare"] },
-  { href: "/projects/tempo",            title: "Tempo",            year: "Fall 2023",   cover: "/images/cover-tempo.webp",          desc: <>An AI-powered system integrating into high-end restaurant operations — enhancing ordering, check-splitting, contactless payment, and task management.</>, tags: ["UX / UI", "Motion", "Hardware"] },
+  { href: "/projects/little-autonomy", title: "Little Autonomy", year: "Fall 2025 – Spring 2026", cover: "/images/covers/cover-little-autonomy.webp", desc: <>A Montessori-inspired app that helps parents raise more independent children at home</>, tags: ["UX Research", "Interaction", "Mobile"] },
+  { href: "/projects/circa",            title: "CIRCA",            year: "Spring 2025", cover: "/images/covers/cover-circa.webp",          desc: <>Rethinking trust in AI-powered pregnancy support</>, tags: ["Product", "AI", "Healthcare"] },
+  { href: "/projects/tempo",            title: "Tempo",            year: "Fall 2023",   cover: "/images/covers/cover-tempo.webp",          desc: <>Three-part AI-powered service orchestration suite designed to reduce operational friction in fine dining</>, tags: ["UI/UX", "Hardware", "POS"] },
 ];
 
 const EXPLORATIONS = [
-  { href: "/projects/medegg",            title: "Medegg",            year: "2024", cover: "/images/cover-medegg.webp",            tags: ["CAD", "Physical"] },
-  { href: "/projects/summit-ware",       title: "Summit Ware",       year: "2024", cover: "/images/cover-summit-ware.webp",       tags: ["CAD", "Physical"] },
-  { href: "/projects/anyi", title: "Anyi", year: "Fall 2023", cover: "/images/cover-mahjong-table-set.webp", tags: ["CAD", "Fabrication"] },
-  { href: "/projects/wash-bus",          title: "Wash Bus",          year: "2023", cover: "/images/cover-wash-bus.webp",          tags: ["Product", "Research"] },
-  { href: "/projects/horizon",           title: "Horizon",           year: "2022", cover: "/images/cover-horizon.webp",           tags: ["Concept", "Prototyping"] },
-  { href: "/projects/color-mixing-marker", title: "Color Mixing Marker", year: "Fall 2021", cover: "/images/cover-color-mixing-pen.png", tags: ["CAD", "Toy Design"] },
+  { href: "/projects/medegg",            title: "MedEgg",            year: "2024", cover: "/images/covers/cover-medegg.webp",            tags: ["CAD", "Physical"] },
+  { href: "/projects/summit-ware",       title: "Summitware",        year: "2024", cover: "/images/covers/cover-summit-ware.webp",       tags: ["CAD", "Physical"] },
+  { href: "/projects/anyi", title: "Anyi", year: "Fall 2023", cover: "/images/covers/cover-mahjong-table-set.webp", tags: ["CAD", "Fabrication"] },
+  { href: "/projects/wash-bus",          title: "Wash Bus",          year: "2023", cover: "/images/covers/cover-wash-bus.webp",          tags: ["Product", "Research"] },
+  { href: "/projects/horizon",           title: "Horizon",           year: "2022", cover: "/images/covers/cover-horizon.webp",           tags: ["Concept", "Prototyping"] },
+  { href: "/projects/color-mixing-marker", title: "Color Mixing Marker", year: "Fall 2021", cover: "/images/covers/cover-color-mixing-pen.webp", tags: ["CAD", "Toy Design"] },
 ];
 
 export default function Projects() {
@@ -69,7 +73,7 @@ export default function Projects() {
             {SELECTED.map(({ href, title, year, cover, desc, tags }) => (
               <Link key={title} href={href} className="sel-card">
                 <div style={{ position: "relative", width: "100%" }}>
-                  <div className="card-img"><img src={cover} alt={title} /></div>
+                  <div className="card-img"><img loading="lazy" src={cover} alt={title} /></div>
                   <div style={{ position: "absolute", top: 12, right: 12, display: "flex", gap: 6, flexWrap: "wrap", justifyContent: "flex-end", pointerEvents: "none" }}>
                     {tags.map(t => (
                       <span key={t} style={{ fontFamily: "var(--body)", fontSize: 11, fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-primary)", background: "rgba(248,248,245,0.92)", border: "1px solid rgba(50,50,49,0.12)", borderRadius: 999, padding: "4px 10px", whiteSpace: "nowrap" }}>{t}</span>
@@ -98,7 +102,7 @@ export default function Projects() {
             {EXPLORATIONS.map(({ href, title, year, cover, tags }) => (
               <Link key={title} href={href} className="exp-card">
                 <div style={{ position: "relative", width: "100%" }}>
-                  <div className="card-img"><img src={cover} alt={title} /></div>
+                  <div className="card-img"><img loading="lazy" src={cover} alt={title} /></div>
                   <div style={{ position: "absolute", top: 12, right: 12, display: "flex", gap: 6, flexWrap: "wrap", justifyContent: "flex-end", pointerEvents: "none" }}>
                     {tags.map(t => (
                       <span key={t} style={{ fontFamily: "var(--body)", fontSize: 11, fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-primary)", background: "rgba(248,248,245,0.92)", border: "1px solid rgba(50,50,49,0.12)", borderRadius: 999, padding: "4px 10px", whiteSpace: "nowrap" }}>{t}</span>

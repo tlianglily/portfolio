@@ -1,6 +1,10 @@
 import { ProjectLayout } from "@/components/ProjectLayout";
 
-export const metadata = { title: "Wash Bus - Lily Liang Portfolio" };
+export const metadata = {
+  title: "Wash Bus - Lily Liang Portfolio",
+  description:
+    "A mobile laundry service for people experiencing homelessness in Atlanta. Service design, branding, and system design. Sponsored by Cognizant.",
+};
 
 /* ─── Helpers ────────────────────────────────────────────────────────────── */
 
@@ -52,18 +56,21 @@ export default function WashBusPage() {
         .wb-insight {
           font-family: var(--display);
           font-style: italic;
-          font-weight: 900;
-          font-size: clamp(17px, 1.7vw, 22px);
-          line-height: 1.35;
-          letter-spacing: -0.02em;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 1.1;
+          letter-spacing: -0.015em;
           color: var(--text-primary);
           border-left: 3px solid var(--washbus-primary);
-          padding-left: 14px;
+          padding: 12px 16px 12px 15px;
           margin: 28px 0 10px;
+          background: rgba(78, 142, 203, 0.03);
+          border-radius: 0 8px 8px 0;
           font-optical-sizing: none;
           font-variation-settings: "opsz" 144, "WONK" 1;
         }
         .wb-insight:first-child { margin-top: 0; }
+        @media (max-width: 768px) { .wb-insight { font-size: 18px; } }
 
         /* Section divider */
         .wb-rule { height: 1px; background: var(--hairline); margin: 36px 0; }
@@ -411,10 +418,10 @@ export default function WashBusPage() {
             exactly as proposed.
           </p>
         }
-        heroImageUrl="/images/washbus-hero-banner.webp"
+        heroImageUrl="/images/wash-bus/washbus-hero-banner.webp"
         heroTint="rgba(10,40,35,0.25)"
         accentVar="var(--washbus-primary)"
-        sponsoredBy={<img src="/images/logo-flowing-with-blessings.png" alt="Flowing with Blessings, Inc." />}
+        sponsoredBy={<img loading="lazy" src="/images/wash-bus/logo-flowing-with-blessings.png" alt="Flowing with Blessings, Inc." />}
         sponsorLabel="Partnered with"
         meta={[
           { key: "Duration",        value: "Summer 2023" },
@@ -438,14 +445,14 @@ export default function WashBusPage() {
           title: "Anyi",
           year: "Fall 2023",
           href: "/projects/anyi",
-          coverUrl: "/images/cover-mahjong-table-set.webp",
+          coverUrl: "/images/covers/cover-mahjong-table-set.webp",
           tint: "rgba(60,15,10,0.58)",
         }}
         nextProject={{
           title: "Horizon",
           year: "2022",
           href: "/projects/horizon",
-          coverUrl: "/images/cover-horizon.webp",
+          coverUrl: "/images/covers/cover-horizon.webp",
           tint: "rgba(10,10,35,0.58)",
         }}
         sections={[
@@ -468,7 +475,7 @@ export default function WashBusPage() {
                 <p>Flowing with Blessings was already operating a weekly mobile shower service for Atlanta&rsquo;s unhoused community. Showers helped &mdash; but guests left clean and changed back into the same dirty clothes. The organization wanted to add laundry to complete the hygiene loop, and needed a team to help figure out how.</p>
                 <p>Our team explored how a school bus could become a self-contained mobile laundry service: how the machines would be secured, how water and electricity would work, how guests and volunteers would move through the space, and how the service would communicate itself to the community.</p>
                 <div style={{ margin: "18px 0" }}>
-                  <img src="/images/washbus-partner-photo.jpg" alt="Wash Bus team with Flowing with Blessings" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px" }} data-lightbox />
+                  <img loading="lazy" src="/images/wash-bus/washbus-partner-photo.webp" alt="Wash Bus team with Flowing with Blessings" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px" }} data-lightbox />
                   <p className="wb-figcap">Team with Flowing with Blessings (I couldn&rsquo;t attend the final presentation in person)</p>
                 </div>
               </>
@@ -481,7 +488,7 @@ export default function WashBusPage() {
             title: "Why Laundry Matters",
             body: (
               <>
-                <img src="/images/washbus-problem.webp" alt="Homelessness in Atlanta — 3,076 people homeless on a given night, 65.1 per 10,000 people" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px", margin: "0 0 18px" }} data-lightbox />
+                <img loading="lazy" src="/images/wash-bus/washbus-problem.webp" alt="Homelessness in Atlanta — 3,076 people homeless on a given night, 65.1 per 10,000 people" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px", margin: "0 0 18px" }} data-lightbox />
                 <Insight>A shower only solves half the problem</Insight>
                 <p>For unhoused individuals trying to find work, cleanliness is directly tied to opportunity. Clean clothes affect how people are perceived at job interviews and in public spaces &mdash; and without access to laundry, even consistent showering isn&rsquo;t enough to maintain hygiene. Atlanta is home to over a quarter of Georgia&rsquo;s homeless population. Flowing with Blessings saw laundry as the missing piece in the hygiene services it was already providing.</p>
               </>
@@ -506,42 +513,42 @@ export default function WashBusPage() {
                       <strong>Machine layout</strong>
                       Washer and dryer placement for a standard school bus footprint, with a prewash utility sink station.
                     </div>
-                    <img src="/images/washbus-machine-layout.webp" alt="Machine layout diagram" style={{ width: "100%", height: "auto", display: "block", mixBlendMode: "multiply" }} data-lightbox />
+                    <img loading="lazy" src="/images/wash-bus/washbus-machine-layout.webp" alt="Machine layout diagram" style={{ width: "100%", height: "auto", display: "block", mixBlendMode: "multiply" }} data-lightbox />
                   </div>
                   <div className="wb-sys-card">
                     <div className="wb-sys-card-body">
                       <strong>Machine securing</strong>
                       Wood screws, window jamb supports, and 5-foot load securing tracks to keep machines stable in transit.
                     </div>
-                    <img src="/images/washbus-securing-machines.webp" alt="Machine securing diagram" style={{ width: "100%", height: "auto", display: "block", mixBlendMode: "multiply" }} data-lightbox />
+                    <img loading="lazy" src="/images/wash-bus/washbus-securing-machines.webp" alt="Machine securing diagram" style={{ width: "100%", height: "auto", display: "block", mixBlendMode: "multiply" }} data-lightbox />
                   </div>
                   <div className="wb-sys-card">
                     <div className="wb-sys-card-body">
                       <strong>Water system</strong>
                       Custom 2&times;4&times;8 fresh water tank &rarr; pump &rarr; hot water heater &rarr; washer, with separate grey water storage tanks for self-contained operation.
                     </div>
-                    <img src="/images/washbus-water-storage.png" alt="Water storage system diagram" style={{ width: "100%", height: "auto", display: "block", mixBlendMode: "multiply" }} data-lightbox />
+                    <img loading="lazy" src="/images/wash-bus/washbus-water-storage.webp" alt="Water storage system diagram" style={{ width: "100%", height: "auto", display: "block", mixBlendMode: "multiply" }} data-lightbox />
                   </div>
                   <div className="wb-sys-card">
                     <div className="wb-sys-card-body">
                       <strong>Electrical system</strong>
                       AC outlets on a DIN rail connected to each machine, running through a circuit breaker to a self-contained power generator.
                     </div>
-                    <img src="/images/washbus-electricity.png" alt="Electricity system diagram — AC outlets, circuit breaker, power generator" style={{ width: "100%", height: "auto", display: "block", mixBlendMode: "multiply" }} data-lightbox />
+                    <img loading="lazy" src="/images/wash-bus/washbus-electricity.webp" alt="Electricity system diagram — AC outlets, circuit breaker, power generator" style={{ width: "100%", height: "auto", display: "block", mixBlendMode: "multiply" }} data-lightbox />
                   </div>
                   <div className="wb-sys-card">
                     <div className="wb-sys-card-body">
                       <strong>Color system</strong>
                       Magnetic name tags on each machine protect guests&rsquo; belongings and provide clear user identification throughout the laundry process.
                     </div>
-                    <img src="/images/washbus-color-system.webp" alt="Color system — magnetic name tags for user identification" style={{ width: "100%", height: "auto", display: "block", mixBlendMode: "multiply" }} data-lightbox />
+                    <img loading="lazy" src="/images/wash-bus/washbus-color-system.webp" alt="Color system — magnetic name tags for user identification" style={{ width: "100%", height: "auto", display: "block", mixBlendMode: "multiply" }} data-lightbox />
                   </div>
                   <div className="wb-sys-card">
                     <div className="wb-sys-card-body">
                       <strong>Volunteer workstation</strong>
                       Folding table with swivel system and under-bench storage, designed to fold flat when the bus is in transit.
                     </div>
-                    <img src="/images/washbus-workstation.webp" alt="Volunteer workstation diagram" style={{ width: "100%", height: "auto", display: "block" }} data-lightbox />
+                    <img loading="lazy" src="/images/wash-bus/washbus-workstation.webp" alt="Volunteer workstation diagram" style={{ width: "100%", height: "auto", display: "block" }} data-lightbox />
                   </div>
                 </div>
 
@@ -550,7 +557,7 @@ export default function WashBusPage() {
                 <h4>Service experience</h4>
                 <p>We mapped the full service flow for both guests and volunteers &mdash; from sign-up to laundry drop-off, washing, and pickup. The goal was to make the process clear and low-friction for people who might be anxious, unfamiliar with the service, or in a hurry.</p>
                 <div style={{ width: "100%", margin: "18px 0", borderRadius: "14px", overflow: "hidden" }}>
-                  <img src="/images/washbus-service-flow.png" alt="Service flow storyboard — guest journey and volunteer coordination" style={{ width: "100%", height: "auto", display: "block" }} data-lightbox />
+                  <img loading="lazy" src="/images/wash-bus/washbus-service-flow.webp" alt="Service flow storyboard — guest journey and volunteer coordination" style={{ width: "100%", height: "auto", display: "block" }} data-lightbox />
                 </div>
 
                 <Rule />
@@ -558,22 +565,22 @@ export default function WashBusPage() {
                 <h4>Branding and outreach</h4>
                 <p>The visual identity needed to work across the bus exterior, social media, and in-person outreach. The bus graphic references flowing water &mdash; echoing the Flowing with Blessings logo &mdash; and doubles as a helping hand shape to signal community and care. The side of the bus carries a step-by-step service diagram so guests can understand the process before they arrive.</p>
                 <Bullet label="Bus graphics">Flowing water motif referencing the partner&rsquo;s logo; side panel service walkthrough.</Bullet>
-                <img src="/images/washbus-bus-graphics-1.webp" alt="Bus side view with flowing water graphic" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px", mixBlendMode: "multiply", margin: "10px 0" }} data-lightbox />
-                <img src="/images/washbus-bus-graphics-2.webp" alt="Bus wayfinding outreach — painting decals" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px", mixBlendMode: "multiply", margin: "6px 0 10px" }} data-lightbox />
+                <img loading="lazy" src="/images/wash-bus/washbus-bus-graphics-1.webp" alt="Bus side view with flowing water graphic" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px", mixBlendMode: "multiply", margin: "10px 0" }} data-lightbox />
+                <img loading="lazy" src="/images/wash-bus/washbus-bus-graphics-2.webp" alt="Bus wayfinding outreach — painting decals" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px", mixBlendMode: "multiply", margin: "6px 0 10px" }} data-lightbox />
                 <Bullet label="Branding">Color palette and typography system developed for the Wash Bus identity.</Bullet>
                 <div className="wb-pair" style={{ margin: "10px 0" }}>
                   <div>
-                    <img src="/images/washbus-branding-colors.png" alt="Wash Bus brand color palette" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px", mixBlendMode: "multiply" }} data-lightbox />
+                    <img loading="lazy" src="/images/wash-bus/washbus-branding-colors.webp" alt="Wash Bus brand color palette" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px", mixBlendMode: "multiply" }} data-lightbox />
                     <p className="wb-figcap">Colors</p>
                   </div>
                   <div>
-                    <img src="/images/washbus-branding-typefaces.png" alt="Wash Bus brand typefaces — Lemon and Futura" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px", mixBlendMode: "multiply" }} data-lightbox />
+                    <img loading="lazy" src="/images/wash-bus/washbus-branding-typefaces.webp" alt="Wash Bus brand typefaces — Lemon and Futura" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px", mixBlendMode: "multiply" }} data-lightbox />
                     <p className="wb-figcap">Typefaces</p>
                   </div>
                 </div>
                 <Bullet label="Outreach materials">Social assets, donor-facing materials, and volunteer recruitment graphics.</Bullet>
                 <div style={{ margin: "10px 0" }}>
-                  <img src="/images/washbus-promotional.png" alt="Wash Bus promotional material — four bus views" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px" }} data-lightbox />
+                  <img loading="lazy" src="/images/wash-bus/washbus-promotional.webp" alt="Wash Bus promotional material — four bus views" style={{ width: "100%", height: "auto", display: "block", borderRadius: "14px" }} data-lightbox />
                   <p className="wb-figcap">Example outreach material</p>
                 </div>
               </>
@@ -595,7 +602,7 @@ export default function WashBusPage() {
                   className="wb-article-card"
                 >
                   <img
-                    src="/images/washbus-gt-article-preview.jpg"
+                    src="/images/wash-bus/washbus-gt-article-preview.webp"
                     alt="The Wash Bus parked outside Grady Hospital"
                     className="wb-article-card-img"
                   />

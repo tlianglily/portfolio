@@ -34,7 +34,7 @@ export function Footer() {
           </div>
           <div className="footer-links">
             <a
-              href="https://linkedin.com/in/lilyliang"
+              href="https://linkedin.com/in/tlianglily"
               target="_blank" rel="noopener noreferrer"
               className="footer-link"
               style={{ fontFamily: "var(--body)", fontSize: 13, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--text-tertiary)", textDecoration: "none" }}

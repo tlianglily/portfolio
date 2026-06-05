@@ -36,8 +36,8 @@ export function BackToTop() {
           bottom: 24px;
           right: 20px;
           z-index: 300;
-          width: 40px;
-          height: 40px;
+          width: 48px;
+          height: 48px;
           border-radius: 50%;
           color: #fff;
           border: none;
@@ -68,7 +68,7 @@ export function BackToTop() {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Back to top"
       >
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
           <path d="M7 11V3M3 6l4-4 4 4" />
         </svg>
       </button>

@@ -65,13 +65,13 @@ export function Nav() {
         }
         .nav-hamburger:hover { background: rgba(50,50,49,0.06); }
         .nav-hamburger span {
-          display: block; width: 100%; height: 1px; background: var(--text-primary);
+          display: block; width: 100%; height: 2px; background: var(--text-secondary);
           border-radius: 2px; transition: transform 300ms ease, opacity 300ms ease;
           transform-origin: center;
         }
-        .nav-open .nav-hamburger span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+        .nav-open .nav-hamburger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
         .nav-open .nav-hamburger span:nth-child(2) { opacity: 0; }
-        .nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+        .nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
         /* Mobile dropdown */
         .nav-dropdown {

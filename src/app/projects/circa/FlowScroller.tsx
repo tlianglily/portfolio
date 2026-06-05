@@ -146,7 +146,7 @@ export function FlowScroller() {
         </div>
         <div ref={cardRef} className="fscroll-card fscroll-card--mobile">
           <div className="fscroll-clip">
-            <img ref={imgRef} src="/images/circa-flow-v2.png" alt="CIRCA care flow" className="fscroll-img" />
+            <img loading="lazy" ref={imgRef} src="/images/circa/circa-flow-v2.webp" alt="CIRCA care flow" className="fscroll-img" />
             <div ref={hlRef} className="fscroll-hl" />
           </div>
         </div>
@@ -168,7 +168,7 @@ export function FlowScroller() {
           <div className="fscroll-clip">
             <img
               ref={imgRef}
-              src="/images/circa-flow-v2.png"
+              src="/images/circa/circa-flow-v2.webp"
               alt="CIRCA care flow"
               className="fscroll-img"
             />

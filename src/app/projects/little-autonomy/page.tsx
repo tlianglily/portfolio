@@ -1,6 +1,10 @@
 import { ProjectLayout } from "@/components/ProjectLayout";
 
-export const metadata = { title: "Little Autonomy - Lily Liang Portfolio" };
+export const metadata = {
+  title: "Little Autonomy - Lily Liang Portfolio",
+  description:
+    "A Montessori-inspired mobile app that helps parents raise more independent children at home. UX design, conjoint analysis, and business model. Fall 2025–Spring 2026.",
+};
 
 /* ─── Helpers ───────────────────────────────────────────────────────────── */
 
@@ -33,9 +37,9 @@ function PhoneMockup({ screenSrc, screenAlt }: { screenSrc: string; screenAlt: s
     <div className="la-phone-mockup">
       {screenSrc.endsWith('.mp4')
         ? <video src={screenSrc} autoPlay loop muted playsInline className="la-phone-mockup-screen" />
-        : <img src={screenSrc} alt={screenAlt} className="la-phone-mockup-screen" />
+        : <img loading="lazy" src={screenSrc} alt={screenAlt} className="la-phone-mockup-screen" />
       }
-      <img src="/images/la-phone-frame.png" alt="" aria-hidden className="la-phone-mockup-frame" />
+      <img loading="lazy" src="/images/la/la-phone-frame.webp" alt="" aria-hidden className="la-phone-mockup-frame" />
     </div>
   );
 }
@@ -50,18 +54,6 @@ function PhoneSlot({ filename, label }: { filename: string; label: string }) {
   );
 }
 
-/** My Contribution placeholder */
-function ContribSlot() {
-  return (
-    <div className="la-contrib-slot">
-      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="la-contrib-icon">
-        <path d="M11 2.5a2.121 2.121 0 0 1 3 3L5.5 14 2 15l1-3.5L11 2.5Z"
-          stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-      <span>My contribution — to be added</span>
-    </div>
-  );
-}
 
 export default function LittleAutonomyPage() {
   return (
@@ -72,17 +64,20 @@ export default function LittleAutonomyPage() {
         /* ── Pull-quote insight headline ─────────────────────────────── */
         .la-insight {
           font-family: var(--display);
-          font-style: italic; font-weight: 900;
-          font-size: clamp(17px, 1.7vw, 22px);
-          line-height: 1.35; letter-spacing: -0.02em;
+          font-style: italic; font-weight: 400;
+          font-size: 22px;
+          line-height: 1.1; letter-spacing: -0.015em;
           color: var(--text-primary);
           border-left: 3px solid var(--la-primary);
-          padding-left: 15px;
+          padding: 12px 16px 12px 15px;
           margin: 28px 0 10px;
+          background: rgba(122, 54, 253, 0.03);
+          border-radius: 0 8px 8px 0;
           font-optical-sizing: none;
           font-variation-settings: "opsz" 144, "WONK" 1;
         }
         .la-insight:first-child { margin-top: 0; }
+        @media (max-width: 768px) { .la-insight { font-size: 18px; } }
 
         /* ── Video title ─────────────────────────────────────────────── */
         .la-video-title {
@@ -396,13 +391,8 @@ export default function LittleAutonomyPage() {
         .la-solution-img {
           width: 100%; height: auto; display: block;
         }
-        .la-figma-embed {
-          width: 100%; aspect-ratio: 9/16;
-          border-radius: 20px; overflow: hidden;
-          box-shadow: 0 8px 40px rgba(50,50,49,0.13);
-        }
-        .la-figma-embed iframe {
-          width: 100%; height: 100%; border: none; display: block;
+        .la-product-hero {
+          width: 100%; height: auto; display: block;
         }
         .la-solution-text {
           display: flex; flex-direction: column; gap: 12px;
@@ -524,14 +514,14 @@ export default function LittleAutonomyPage() {
         description={
           <p>Little Autonomy is a mobile app that helps parents build their child&rsquo;s independence at home through Montessori-inspired guidance and environment setup. We designed it from scratch around two barriers parents face: not knowing what to do, and not being able to prepare the right environment.</p>
         }
-        titleImageUrl="/images/la-wordmark.svg"
-        heroImageUrl="/images/cover-little-autonomy.webp"
+        titleImageUrl="/images/la/la-wordmark.svg"
+        heroImageUrl="/images/covers/cover-little-autonomy.webp"
         heroTint="rgba(18, 4, 48, 0.58)"
         accentVar="var(--la-primary)"
         meta={[
           { key: "Duration", value: "Fall 2025 – Spring 2026" },
           { key: "Team",    value: "Lily Liang, Bowen Fu, Yue Fei, Kerry Wen" },
-          { key: "My Contribution", value: "[ to be added ]" },
+          { key: "My Contribution", value: "UX design, conjoint analysis, business model" },
           { key: "Outcome", value: "A from-scratch app concept that turns Montessori principles into step-by-step guidance and personalized lessons matched to each child's abilities" },
         ]}
         sidebarGroups={[
@@ -569,14 +559,14 @@ export default function LittleAutonomyPage() {
           title: "Tempo",
           year: "Fall 2023",
           href: "/projects/tempo",
-          coverUrl: "/images/cover-tempo.webp",
+          coverUrl: "/images/covers/cover-tempo.webp",
           tint: "rgba(20,8,50,0.55)",
         }}
         nextProject={{
           title: "CIRCA",
           year: "Spring 2025",
           href: "/projects/circa",
-          coverUrl: "/images/cover-circa.png",
+          coverUrl: "/images/covers/cover-circa.webp",
           tint: "rgba(160,40,60,0.52)",
         }}
         sections={[
@@ -592,7 +582,7 @@ export default function LittleAutonomyPage() {
                 <div className="la-stat-pair">
                   <div className="la-stat-card">
                     <div className="la-stat-card-img-well">
-                      <img src="/images/la-problem-stress.png" alt="Parent overwhelmed by daily stress" />
+                      <img loading="lazy" src="/images/la/la-problem-stress.webp" alt="Parent overwhelmed by daily stress" />
                     </div>
                     <div className="la-stat-card-body">
                       <div className="la-stat-num">62%</div>
@@ -601,7 +591,7 @@ export default function LittleAutonomyPage() {
                   </div>
                   <div className="la-stat-card">
                     <div className="la-stat-card-img-well">
-                      <img src="/images/la-problem-clarity.png" alt="Parent overwhelmed by too much advice" />
+                      <img loading="lazy" src="/images/la/la-problem-clarity.webp" alt="Parent overwhelmed by too much advice" />
                     </div>
                     <div className="la-stat-card-body">
                       <div className="la-stat-num">68%</div>
@@ -624,13 +614,13 @@ export default function LittleAutonomyPage() {
 
                 <Insight>Montessori builds independence through a prepared environment &mdash; the hardest part to recreate at home</Insight>
                 <p>Montessori works through a prepared environment of instruction, materials, and furniture &mdash; but at home, materials are costly and clear guidance is scarce.</p>
-                <img src="/images/la-montessori-equation.svg" alt="Montessori equation diagram" className="la-full-img" data-lightbox />
+                <img loading="lazy" src="/images/la/la-montessori-equation.svg" alt="Montessori equation diagram" className="la-full-img" data-lightbox />
 
                 <Rule />
 
                 <Insight>Most solutions give advice; almost none give a system</Insight>
                 <p>Existing options are either expensive and structured or cheap and unstructured. Almost nothing offers actionable guidance at an accessible price &mdash; the open space Little Autonomy fills.</p>
-                <img src="/images/la-positioning-map.svg" alt="Positioning map: structured vs unstructured guidance by price" className="la-full-img la-positioning-map" style={{ width: "84%", margin: "18px auto" }} data-lightbox />
+                <img loading="lazy" src="/images/la/la-positioning-map.svg" alt="Positioning map: structured vs unstructured guidance by price" className="la-full-img la-positioning-map" style={{ width: "84%", margin: "18px auto" }} data-lightbox />
               </>
             ),
           },
@@ -642,12 +632,11 @@ export default function LittleAutonomyPage() {
             body: (
               <>
                 <div className="la-solution-row">
-                  <div className="la-figma-embed">
-                    <iframe
-                      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRNj5BGVq3WOJaOVUsMY7xm%2FLittle-Autonomy---Prototype%3Fnode-id%3D1-2977%26p%3Df%26viewport%3D222%252C25%252C0.04%26t%3DD6BCsWKmCmbvnbeM-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D1%253A4252%26page-id%3D0%253A1"
-                      allowFullScreen
-                    />
-                  </div>
+                  <img
+                    src="/images/la/la-product-hero.webp"
+                    alt="Little Autonomy app screens"
+                    className="la-product-hero"
+                  />
                   <div className="la-solution-text">
                     <Insight>Little Autonomy turns Montessori into a system parents can follow</Insight>
                     <p>Little Autonomy is a mobile app that builds a child&rsquo;s independence at home through the two things Montessori depends on: guided practice on what to do, and help setting up the environment to do it in. Each is matched to the child&rsquo;s current abilities, so parents always know the next step.</p>
@@ -692,7 +681,7 @@ export default function LittleAutonomyPage() {
                     </div>
                   </div>
                   <div className="la-research-photo-wrap">
-                    <img src="/images/la-research-scope.webp" alt="Field research and interviews" className="la-research-photo" />
+                    <img loading="lazy" src="/images/la/la-research-scope.webp" alt="Field research and interviews" className="la-research-photo" />
                   </div>
                 </div>
               </>
@@ -705,7 +694,7 @@ export default function LittleAutonomyPage() {
             title: "My Contribution",
             body: (
               <>
-                <ContribSlot />
+                <p>I led the UX design across the full product — defining the app flow, the personalized recommendation system, and the guided step-by-step practice experience. I also built the conjoint analysis that quantified user feature preferences, which directly drove the decision to cut the AI chatbot in favor of live Montessori educator access. On the business side, I contributed to market sizing and the subscription model. Research was a full team effort across interviews, field visits, surveys, and forum analysis.</p>
               </>
             ),
           },
@@ -721,7 +710,7 @@ export default function LittleAutonomyPage() {
 
                 <div className="la-gp-feature">
                   <div className="la-gp-feature-media">
-                    <PhoneMockup screenSrc="/images/la-rec-screen.mp4" screenAlt="Personalized recommendation screen" />
+                    <PhoneMockup screenSrc="/images/la/la-rec-screen.mp4" screenAlt="Personalized recommendation screen" />
                   </div>
                   <div className="la-gp-feature-text">
                     <h4>Personalized recommendation</h4>
@@ -731,7 +720,7 @@ export default function LittleAutonomyPage() {
 
                 <div className="la-gp-feature la-gp-feature--flip">
                   <div className="la-gp-feature-media">
-                    <PhoneMockup screenSrc="/images/la-gif-step-by-step.mp4" screenAlt="Step-by-step guidance screen" />
+                    <PhoneMockup screenSrc="/images/la/la-gif-step-by-step.mp4" screenAlt="Step-by-step guidance screen" />
                   </div>
                   <div className="la-gp-feature-text">
                     <h4>Step-by-step guidance</h4>
@@ -741,7 +730,7 @@ export default function LittleAutonomyPage() {
 
                 <div className="la-gp-feature">
                   <div className="la-gp-feature-media">
-                    <PhoneMockup screenSrc="/images/la-gif-task-shelf.mp4" screenAlt="Task shelf screen" />
+                    <PhoneMockup screenSrc="/images/la/la-gif-task-shelf.mp4" screenAlt="Task shelf screen" />
                   </div>
                   <div className="la-gp-feature-text">
                     <h4>Task shelf</h4>
@@ -755,21 +744,21 @@ export default function LittleAutonomyPage() {
                 <p>After a parent told us the age chart made her anxious instead of helping her act, we rebuilt the roadmap around developmental phases.</p>
                 <div className="la-compare la-compare--three">
                   <div className="la-compare-col">
-                    <img src="/images/la-roadmap-v1.png" alt="V1 age-based roadmap" />
+                    <img loading="lazy" src="/images/la/la-roadmap-v1.webp" alt="V1 age-based roadmap" />
                     <div className="la-compare-caption">
                       <span className="la-version-tag la-version-tag--before">Iteration 1</span>
                       <p>Age-based milestones made parents anxious about where their child <em>should</em> be.</p>
                     </div>
                   </div>
                   <div className="la-compare-col">
-                    <img src="/images/la-roadmap-v2.png" alt="V2 phase-based roadmap" />
+                    <img loading="lazy" src="/images/la/la-roadmap-v2.webp" alt="V2 phase-based roadmap" />
                     <div className="la-compare-caption">
                       <span className="la-version-tag la-version-tag--before">Iteration 2</span>
                       <p>Switched to phase bubbles &mdash; better framing, but still too abstract for parents to act on.</p>
                     </div>
                   </div>
                   <div className="la-compare-col">
-                    <img src="/images/la-phone-2.png" alt="Final personalized recommendation screen" />
+                    <img loading="lazy" src="/images/la/la-phone-2.webp" alt="Final personalized recommendation screen" />
                     <div className="la-compare-caption">
                       <span className="la-version-tag la-version-tag--after">Final</span>
                       <p>Capability-matched recommendations answer &ldquo;what should we practice today?&rdquo;</p>
@@ -791,7 +780,7 @@ export default function LittleAutonomyPage() {
 
                 <div className="la-gp-feature">
                   <div className="la-gp-feature-media">
-                    <PhoneMockup screenSrc="/images/la-gif-scan.mp4" screenAlt="Scan for advice screen" />
+                    <PhoneMockup screenSrc="/images/la/la-gif-scan.mp4" screenAlt="Scan for advice screen" />
                   </div>
                   <div className="la-gp-feature-text">
                     <h4>Scan for advice</h4>
@@ -801,7 +790,7 @@ export default function LittleAutonomyPage() {
 
                 <div className="la-gp-feature la-gp-feature--flip">
                   <div className="la-gp-feature-media">
-                    <PhoneMockup screenSrc="/images/la-gif-instructions.mp4" screenAlt="Illustrative instructions screen" />
+                    <PhoneMockup screenSrc="/images/la/la-gif-instructions.mp4" screenAlt="Illustrative instructions screen" />
                   </div>
                   <div className="la-gp-feature-text">
                     <h4>Show, don&rsquo;t tell</h4>
@@ -815,14 +804,14 @@ export default function LittleAutonomyPage() {
                 <p>We swapped our text checklist for illustrated instructions and a scan feature that reads a room and flags what to fix.</p>
                 <div className="la-compare la-compare--two-narrow">
                   <div className="la-compare-col">
-                    <img src="/images/la-checklist-v1.png" alt="Iteration 1 — text checklist" />
+                    <img loading="lazy" src="/images/la/la-checklist-v1.webp" alt="Iteration 1 — text checklist" />
                     <div className="la-compare-caption">
                       <span className="la-version-tag la-version-tag--before">Iteration 1</span>
                       <p>A text-heavy checklist. Parents skimmed it, missed steps, and felt overwhelmed.</p>
                     </div>
                   </div>
                   <div className="la-compare-col">
-                    <img src="/images/la-checklist-v2.png" alt="Final — illustrated checklist" />
+                    <img loading="lazy" src="/images/la/la-checklist-v2.webp" alt="Final — illustrated checklist" />
                     <div className="la-compare-caption">
                       <span className="la-version-tag la-version-tag--after">Final</span>
                       <p>Added illustrations and task cards &mdash; clearer, but still missing a space assessment.</p>
@@ -845,8 +834,8 @@ export default function LittleAutonomyPage() {
                     <p>We connected parents directly to Montessori educators and cut the AI chatbot &mdash; research showed parents trust experts, and it carried a <span className="la-badge-neg">−21.2% preference impact</span>.</p>
                   </div>
                   <div className="la-phone-row-img la-phone-row-img--two">
-                    <img src="/images/la-screen-expert-chat.png" alt="Expert chat with real Montessori educators" className="la-phone-img" />
-                    <img src="/images/la-screen-expert-removed.png" alt="AI chatbot that was removed" className="la-phone-img" />
+                    <img loading="lazy" src="/images/la/la-screen-expert-chat.webp" alt="Expert chat with real Montessori educators" className="la-phone-img" />
+                    <img loading="lazy" src="/images/la/la-screen-expert-removed.webp" alt="AI chatbot that was removed" className="la-phone-img" />
                   </div>
                 </div>
               </>
@@ -862,9 +851,9 @@ export default function LittleAutonomyPage() {
                 <Insight>Parents didn&rsquo;t just like it &mdash; they saw their mornings getting easier</Insight>
                 <p>Parents told us children want to practice independence, not be told what to do &mdash; and saw the real payoff as time back in their own day.</p>
                 <div className="la-validation-grid">
-                  <img src="/images/la-validation-1.svg" alt="Parent validation card 1" className="la-validation-img" data-lightbox />
-                  <img src="/images/la-validation-2.svg" alt="Parent validation card 2" className="la-validation-img" data-lightbox />
-                  <img src="/images/la-validation-3.svg" alt="Parent validation card 3" className="la-validation-img" data-lightbox />
+                  <img loading="lazy" src="/images/la/la-validation-1.svg" alt="Parent validation card 1" className="la-validation-img" data-lightbox />
+                  <img loading="lazy" src="/images/la/la-validation-2.svg" alt="Parent validation card 2" className="la-validation-img" data-lightbox />
+                  <img loading="lazy" src="/images/la/la-validation-3.svg" alt="Parent validation card 3" className="la-validation-img" data-lightbox />
                 </div>
               </>
             ),
@@ -878,7 +867,7 @@ export default function LittleAutonomyPage() {
               <>
                 <Insight>An open quadrant: structured guidance at an accessible price</Insight>
                 <p>Little Autonomy targets the underserved parents interested in Montessori, not just those already enrolled.</p>
-                <img src="/images/la-tam-sam-som.svg" alt="TAM SAM SOM: 600-700M global parents to 0.5-1M target" className="la-full-img la-tam-sam-som" style={{ width: "65%", margin: "18px auto" }} data-lightbox />
+                <img loading="lazy" src="/images/la/la-tam-sam-som.svg" alt="TAM SAM SOM: 600-700M global parents to 0.5-1M target" className="la-full-img la-tam-sam-som" style={{ width: "65%", margin: "18px auto" }} data-lightbox />
               </>
             ),
           },
@@ -892,7 +881,7 @@ export default function LittleAutonomyPage() {
                 <Insight>A subscription model with proven margins</Insight>
                 <p>A $12.99/month subscription with expert add-ons, built on healthy margins and a phased path to scale.</p>
                 <div className="la-biz-row">
-                  <img src="/images/la-business-model.svg" alt="Subscription model: $12.99/mo, 77.6% gross margin, $393 LTV" className="la-biz-row-img" data-lightbox />
+                  <img loading="lazy" src="/images/la/la-business-model.svg" alt="Subscription model: $12.99/mo, 77.6% gross margin, $393 LTV" className="la-biz-row-img" data-lightbox />
                   <div className="la-metrics-stack">
                     <div className="la-metric">
                       <div className="la-metric-val">$12.99</div>
@@ -917,7 +906,14 @@ export default function LittleAutonomyPage() {
             id: "reflection",
             title: "Reflection",
             body: (
-              <p>This project taught me that good design is as much about restraint as addition. The clearest proof was cutting the AI chatbot the research didn&rsquo;t support &mdash; designing for anxious parents meant building only the few things that genuinely reduced friction: knowing the next step, setting up the space, and reaching a real expert when it mattered.</p>
+              <>
+                <p>This project taught me that good design is as much about restraint as addition. The clearest proof was cutting the AI chatbot the research didn&rsquo;t support &mdash; designing for anxious parents meant building only the few things that genuinely reduced friction: knowing the next step, setting up the space, and reaching a real expert when it mattered.</p>
+                <p style={{ marginTop: "1.25em" }}>This was the first project where business constraints directly reshaped design decisions. Our conjoint analysis revealed a clear price sensitivity threshold &mdash; which meant cutting a feature we&rsquo;d planned as core to the experience, and revisiting multiple screens as the business model adjusted. It was uncomfortable to redesign work we&rsquo;d already refined, but it made the final product more honest about what it could actually sustain.</p>
+                <p style={{ marginTop: "1.25em" }}>The other thing that shaped this project most was our external Montessori education mentor. Her passion for the philosophy was contagious &mdash; without her, we would have designed around Montessori rather than from it. It reminded me that reaching out early to the right outside voice can change a project&rsquo;s entire trajectory.</p>
+                <p style={{ marginTop: "1.25em" }}>The biggest process lesson: expect to pivot, but don&rsquo;t treat earlier work as waste. Our early research resurfaced in meaningful ways throughout &mdash; the pivots built on what came before rather than discarding it.</p>
+                <img loading="lazy" src="/images/la/la-team.webp" alt="Little Autonomy team" style={{ width: "100%", height: "auto", display: "block", marginTop: "2em", borderRadius: 16 }} />
+                <p style={{ fontFamily: "var(--body)", fontSize: 12, color: "var(--text-tertiary)", marginTop: "0.75em", textAlign: "center" }}>Our team after our final presentation with our external Montessori mentor.</p>
+              </>
             ),
           },
 

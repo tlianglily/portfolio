@@ -1,6 +1,10 @@
 import { ProjectLayout } from "@/components/ProjectLayout";
 
-export const metadata = { title: "Tempo - Lily Liang Portfolio" };
+export const metadata = {
+  title: "Tempo - Lily Liang Portfolio",
+  description:
+    "Three-part AI-powered service suite for fine dining restaurants — TempoScribe, TempoChime, and TempoTap. Designed for NCR Voyix, Fall 2023.",
+};
 
 /* ─── Helpers ─────────────────────────────────────────────────────────────── */
 
@@ -108,17 +112,17 @@ function GestureEditsStack() {
   const gestures = [
     {
       label: "Drag to Reassign",
-      src: "/images/tempo-gesture-drag-reassign.webp",
+      src: "/images/tempo/tempo-gesture-drag-reassign.webp",
       alt: "Tempo gesture demo showing dragging an order to reassign it",
     },
     {
       label: "Tap to Modify",
-      src: "/images/tempo-gesture-tap-modify.mp4",
+      src: "/images/tempo/tempo-gesture-tap-modify.mp4",
       alt: "Tempo gesture demo showing tapping an order to modify it",
     },
     {
       label: "Cross to Delete",
-      src: "/images/tempo-gesture-cross-delete.mp4",
+      src: "/images/tempo/tempo-gesture-cross-delete.mp4",
       alt: "Tempo gesture demo showing crossing out an order to delete it",
     },
   ];
@@ -130,30 +134,13 @@ function GestureEditsStack() {
           <div className="tp-gesture-media">
             {src.endsWith('.mp4')
               ? <video className="tp-gesture-gif" src={src} autoPlay loop muted playsInline />
-              : <img className="tp-gesture-gif" src={src} alt={alt} />
+              : <img loading="lazy" className="tp-gesture-gif" src={src} alt={alt} />
             }
-            <img className="tp-gesture-frame" src="/images/tempo-gesture-frame.svg" alt="" aria-hidden="true" />
+            <img loading="lazy" className="tp-gesture-frame" src="/images/tempo/tempo-gesture-frame.svg" alt="" aria-hidden="true" />
           </div>
           <span className="tp-gesture-label">{label}</span>
         </div>
       ))}
-    </div>
-  );
-}
-
-function ContribSlot() {
-  return (
-    <div className="tp-contrib">
-      <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
-        <path
-          d="M11 2.5a2.121 2.121 0 0 1 3 3L5.5 14 2 15l1-3.5L11 2.5Z"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      My contribution — to be added
     </div>
   );
 }
@@ -170,18 +157,21 @@ export default function TempoPage() {
         .tp-insight {
           font-family: var(--display);
           font-style: italic;
-          font-weight: 900;
-          font-size: clamp(17px, 1.7vw, 22px);
-          line-height: 1.35;
-          letter-spacing: -0.02em;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 1.1;
+          letter-spacing: -0.015em;
           color: var(--text-primary);
           border-left: 3px solid var(--tempo-primary);
-          padding-left: 14px;
+          padding: 12px 16px 12px 15px;
           margin: 28px 0 10px;
+          background: rgba(95, 36, 159, 0.03);
+          border-radius: 0 8px 8px 0;
           font-optical-sizing: none;
           font-variation-settings: "opsz" 144, "WONK" 1;
         }
         .tp-insight:first-child { margin-top: 0; }
+        @media (max-width: 768px) { .tp-insight { font-size: 18px; } }
 
         /* ── Rule ─────────────────────────────────────────────── */
         .tp-rule { height: 1px; background: var(--hairline); margin: 36px 0; }
@@ -532,7 +522,7 @@ export default function TempoPage() {
           flex-direction: column;
           align-items: center;
           justify-content: flex-start;
-          gap: clamp(28px, 5.5vw, 46px);
+          gap: 0;
           min-width: 0;
           padding-top: clamp(10px, 1.8vw, 16px);
         }
@@ -540,6 +530,7 @@ export default function TempoPage() {
           position: relative;
           width: clamp(120px, 100%, 100%);
           aspect-ratio: 462 / 776;
+          margin-bottom: clamp(52px, 10vw, 72px);
         }
         .tp-gesture-gif,
         .tp-gesture-frame {
@@ -575,6 +566,8 @@ export default function TempoPage() {
           display: flex;
           align-items: flex-start;
           justify-content: center;
+          position: relative;
+          z-index: 1;
         }
         @media (max-width: 768px) {
           .tp-gesture-stack { grid-template-columns: 1fr; }
@@ -703,17 +696,17 @@ export default function TempoPage() {
           </p>
         }
         sponsoredBy={
-          <img src="/images/ncr-voyix-logo.svg" alt="NCR Voyix" style={{ height: 20 }} />
+          <img loading="lazy" src="/images/tempo/ncr-voyix-logo.svg" alt="NCR Voyix" style={{ height: 20 }} />
         }
-        titleImageUrl="/images/tempo-logo.svg"
-        heroImageUrl="/images/cover-tempo.webp"
+        titleImageUrl="/images/tempo/tempo-logo.svg"
+        heroImageUrl="/images/covers/cover-tempo.webp"
         heroTint="rgba(20,8,50,0.55)"
         accentVar="var(--tempo-primary)"
         meta={[
           { key: "Duration",        value: "Fall 2023" },
           { key: "Team",            value: "Lily Liang, Priyanka Jain, Hope Rackers, Kareen Yeung" },
-          { key: "My Contribution", value: "[ to be added ]" },
-          { key: "Partner",         value: "NCR VOYIX" },
+          { key: "My Contribution", value: "TempoChime concept, AI orchestration logic, UX & IA, CAD & renderings" },
+          { key: "Partner",         value: "NCR Voyix" },
           { key: "Outcome",         value: "A three-part hardware and software suite — TempoScribe, TempoChime, and TempoTap — validated with restaurant managers and designed to position NCR as a one-stop-shop for high-end restaurant operations" },
         ]}
         sidebarGroups={[
@@ -750,14 +743,14 @@ export default function TempoPage() {
           title: "CIRCA",
           year: "Spring 2025",
           href: "/projects/circa",
-          coverUrl: "/images/cover-circa.png",
+          coverUrl: "/images/covers/cover-circa.webp",
           tint: "rgba(140,30,50,0.52)",
         }}
         nextProject={{
           title: "Little Autonomy",
           year: "Fall 2025 – Spring 2026",
           href: "/projects/little-autonomy",
-          coverUrl: "/images/cover-little-autonomy.webp",
+          coverUrl: "/images/covers/cover-little-autonomy.webp",
           tint: "rgba(30,10,60,0.55)",
         }}
         sections={[
@@ -788,7 +781,7 @@ export default function TempoPage() {
                 <p>As staff wages rise, fine-dining restaurants raise prices to survive — but their labor-heavy model makes every empty seat, every delayed course, and every bad review costlier than ever. High-end dining has almost no margin for operational error.</p>
                 <figure className="tp-fig tp-fig--sm">
                   <img
-                    src="/images/tempo-problem-framing.svg"
+                    src="/images/tempo/tempo-problem-framing.svg"
                     alt="Problem framing: fine dining cost and expectation pressures"
                     className="tp-fig-img"
                   />
@@ -801,7 +794,7 @@ export default function TempoPage() {
                 <p>Fine dining doesn&rsquo;t just require good food — it requires a choreographed sequence of service steps, coordinated across servers, sommeliers, food runners, and bussers. When any one person falls behind, the whole table feels it. And because guests are paying a premium, they notice everything that goes wrong.</p>
                 <figure className="tp-fig tp-fig--lg">
                   <img
-                    src="/images/tempo-guest-journey-map.svg"
+                    src="/images/tempo/tempo-guest-journey-map.svg"
                     alt="Guest journey map showing multi-staff service sequence and failure points"
                     className="tp-fig-img"
                     data-lightbox
@@ -821,7 +814,7 @@ export default function TempoPage() {
                 <Insight>Tempo keeps the dining room in sync</Insight>
                 <p>Tempo is a three-part service-orchestration suite — an AI ordering system (TempoScribe), a task coordination system (TempoChime), and a smart payment system (TempoTap) — designed to reduce operational friction without disrupting the premium service experience guests expect.</p>
                 <div className="tp-img-crop tp-img-crop--full">
-                  <img src="/images/tempo-system-overview.webp" alt="Tempo full system overview" />
+                  <img loading="lazy" src="/images/tempo/tempo-system-overview.webp" alt="Tempo full system overview" />
                 </div>
               </>
             ),
@@ -843,7 +836,7 @@ export default function TempoPage() {
                 ]} />
                 <p>We interviewed servers, managers, and fine dining guests, ran consumer surveys, and spent 25+ hours in restaurant visits and field observation. 45 insights came out of that research — across consumer experience, service operations, and technology — and shaped every design decision Tempo makes.</p>
                 <div className="tp-img-crop tp-img-crop--interview">
-                  <img src="/images/tempo-interview-image.webp" alt="Tempo interview and restaurant field research collage" />
+                  <img loading="lazy" src="/images/tempo/tempo-interview-image.webp" alt="Tempo interview and restaurant field research collage" />
                 </div>
               </>
             ),
@@ -858,7 +851,7 @@ export default function TempoPage() {
                 <Insight>One person can delay the whole sequence</Insight>
                 <p>Fine dining runs on a set sequence of operation — and any single handoff between staff members can stall the whole table. Less than 28% of diners are willing to wait more than 30 minutes, making coordination failures directly visible to guests.</p>
                 <div className="tp-insight-split">
-                  <img src="/images/tempo-sequence-diagram.svg" alt="Broken event sequence diagram: service flow and staff handoff points" className="tp-insight-split-img" />
+                  <img loading="lazy" src="/images/tempo/tempo-sequence-diagram.svg" alt="Broken event sequence diagram: service flow and staff handoff points" className="tp-insight-split-img" />
                   <Quote attribution="— Sophia, Server">
                     &ldquo;Everyone has to work as fast as possible to avoid these miscommunications.&rdquo;
                   </Quote>
@@ -872,7 +865,8 @@ export default function TempoPage() {
                   &ldquo;I&rsquo;ve been here for 2 years ... I&rsquo;m at your table long before [the time limit for table greeting]&rdquo;
                 </Quote>
                 <figure className="tp-fig tp-fig--lg">
-                  <img src="/images/tempo-service-blueprint.svg" alt="Service blueprint: front stage / back stage showing understaffing and neglect points" className="tp-fig-img" data-lightbox />
+                  <img loading="lazy" src="/images/tempo/tempo-service-blueprint.svg" alt="Service blueprint: front stage / back stage showing understaffing and neglect points" className="tp-fig-img" data-lightbox />
+                  <figcaption className="tp-fig-caption">High-end Restaurant Service Blueprint</figcaption>
                 </figure>
 
                 <Rule />
@@ -882,7 +876,7 @@ export default function TempoPage() {
                 <div className="tp-stat-quote-grid">
                   <figure className="tp-fig tp-fig--stat">
                     <img
-                      src="/images/tempo-stat-rating.png"
+                      src="/images/tempo/tempo-stat-rating.webp"
                       alt="More than 72% find out about restaurants through online search and rating platforms"
                       className="tp-fig-img"
                     />
@@ -899,7 +893,7 @@ export default function TempoPage() {
           {
             id: "contribution",
             title: "My Contribution",
-            body: <ContribSlot />,
+            body: <p>I originated the TempoChime concept — identifying inter-staff communication as the root coordination failure in fine dining and proposing a wearable device as the solution. I defined the AI orchestration logic behind it, designed the full information architecture and UX, and created all CAD models and renderings for the wristband hardware. Research was a full team effort. TempoScribe and TempoTap were led by teammates.</p>,
           },
 
           /* ── OBJECTIVE ────────────────────────────────────────────────────── */
@@ -911,7 +905,7 @@ export default function TempoPage() {
                 <Insight>Designing for flow, not features</Insight>
                 <p>The design objective was to <strong>use AI to improve the flow and consistency of premium service — without adding cognitive load for staff. Any feature that made the server think harder was a feature that worked against the goal.</strong></p>
                 <figure className="tp-fig tp-fig--lg">
-                  <img src="/images/tempo-design-criteria.svg" alt="Design criteria grid: must have / should have / nice to have" className="tp-fig-img" data-lightbox />
+                  <img loading="lazy" src="/images/tempo/tempo-design-criteria.svg" alt="Design criteria grid: must have / should have / nice to have" className="tp-fig-img" data-lightbox />
                 </figure>
               </>
             ),
@@ -925,7 +919,7 @@ export default function TempoPage() {
               <>
                 <figure className="tp-fig tp-fig--full">
                   <img
-                    src="/images/tempo-scribe-hero.webp"
+                    src="/images/tempo/tempo-scribe-hero.webp"
                     alt="TempoScribe product render on a restaurant table"
                     className="tp-fig-img"
                   />
@@ -934,7 +928,7 @@ export default function TempoPage() {
                 <p>Taking an order at a fine dining restaurant involves remembering seat assignments, capturing custom requests, navigating a complex POS interface, and doing it all without disrupting the guest&rsquo;s experience. Servers were spending more time managing the system than managing the table.</p>
                 <figure className="tp-fig tp-fig--md">
                   <img
-                    src="/images/tempo-pos-before.webp"
+                    src="/images/tempo/tempo-pos-before.webp"
                     alt="Current POS system: cluttered interface"
                     className="tp-fig-img"
                   />
@@ -948,14 +942,14 @@ export default function TempoPage() {
                   <TrustCard
                     label="Voice to text"
                     slot={
-                      <video autoPlay loop muted playsInline><source src="/images/tempo-scribe-voice-to-text.mp4" type="video/mp4" /></video>
+                      <video autoPlay loop muted playsInline><source src="/images/tempo/tempo-scribe-voice-to-text.mp4" type="video/mp4" /></video>
                     }
                   >Server taps a seat to begin — built-in voice recognition then tracks who&rsquo;s speaking, so no extra taps are needed for each guest.</TrustCard>
                   <TrustCard
                     label="Handwriting to text"
                     slot={
                       <img
-                        src="/images/tempo-scribe-handwriting.png"
+                        src="/images/tempo/tempo-scribe-handwriting.webp"
                         alt="TempoScribe handwriting to text screen"
                       />
                     }
@@ -977,7 +971,7 @@ export default function TempoPage() {
               <>
                 <figure className="tp-fig tp-fig--full">
                   <img
-                    src="/images/tempo-chime-hero.webp"
+                    src="/images/tempo/tempo-chime-hero.webp"
                     alt="TempoChime product render showing table timers on restaurant devices"
                     className="tp-fig-img"
                   />
@@ -986,10 +980,11 @@ export default function TempoPage() {
                 <p>Without a live view of table status, task assignments were communicated verbally or not at all. Servers couldn&rsquo;t see where other staff were, what tasks were in progress, or when a table was falling behind. Coordination depended entirely on memory and experience.</p>
                 <figure className="tp-fig tp-fig--flow">
                   <img
-                    src="/images/tempo-information-flow.svg"
+                    src="/images/tempo/tempo-information-flow.svg"
                     alt="Information flow diagram showing staff coordination gap across server, busser, food runner, and sommelier"
                     className="tp-fig-img"
                   />
+                  <figcaption className="tp-fig-caption">Current Information Flow: Missing Inter-Staff Communication</figcaption>
                 </figure>
 
                 <Rule />
@@ -1000,7 +995,7 @@ export default function TempoPage() {
                     label="Customizable timeline"
                     slot={
                       <img
-                        src="/images/tempo-chime-customize-timeline.svg"
+                        src="/images/tempo/tempo-chime-customize-timeline.svg"
                         alt="TempoChime customizable timeline screen"
                       />
                     }
@@ -1008,14 +1003,14 @@ export default function TempoPage() {
                   <TrustCard
                     label="AI task distribution"
                     slot={
-                      <video autoPlay loop muted playsInline><source src="/images/tempo-chime-ai-task-distribution.mp4" type="video/mp4" /></video>
+                      <video autoPlay loop muted playsInline><source src="/images/tempo/tempo-chime-ai-task-distribution.mp4" type="video/mp4" /></video>
                     }
                   >The system assigns tasks to the right staff member at the right moment, triggered when guests are seated.</TrustCard>
                   <TrustCard
                     label="Live staff view"
                     slot={
                       <img
-                        src="/images/tempo-chime-staff-view.svg"
+                        src="/images/tempo/tempo-chime-staff-view.svg"
                         alt="TempoChime live staff view screen"
                       />
                     }
@@ -1023,14 +1018,14 @@ export default function TempoPage() {
                   <TrustCard
                     label="Inter-staff communication"
                     slot={
-                      <video autoPlay loop muted playsInline><source src="/images/tempo-chime-interstaff-communication.mp4" type="video/mp4" /></video>
+                      <video autoPlay loop muted playsInline><source src="/images/tempo/tempo-chime-interstaff-communication.mp4" type="video/mp4" /></video>
                     }
                   >Servers complete tasks by swiping the notification bar — no verbal check-ins needed.</TrustCard>
                   <TrustCard
                     label="Pause and redistribute"
                     slot={
                       <img
-                        src="/images/tempo-chime-status-updating.svg"
+                        src="/images/tempo/tempo-chime-status-updating.svg"
                         alt="TempoChime status updating and task redistribution screen"
                       />
                     }
@@ -1039,7 +1034,7 @@ export default function TempoPage() {
                     label="Server call"
                     slot={
                       <img
-                        src="/images/tempo-chime-server-call.svg"
+                        src="/images/tempo/tempo-chime-server-call.svg"
                         alt="TempoChime server call screen"
                       />
                     }
@@ -1057,7 +1052,7 @@ export default function TempoPage() {
               <>
                 <figure className="tp-fig tp-fig--full">
                   <img
-                    src="/images/tempo-tap-hero.webp"
+                    src="/images/tempo/tempo-tap-hero.webp"
                     alt="TempoTap product render showing a contactless payment device on a restaurant table"
                     className="tp-fig-img"
                   />
@@ -1066,7 +1061,7 @@ export default function TempoPage() {
                 <p>Check splitting at fine dining involves multiple guests, complex orders, and social dynamics around who pays for what. The existing process required servers to manually parse every item — a slow, error-prone close to an otherwise premium experience.</p>
                 <figure className="tp-fig tp-fig--full">
                   <img
-                    src="/images/tempo-check-splitting-pain.webp"
+                    src="/images/tempo/tempo-check-splitting-pain.webp"
                     alt="Guests at a restaurant struggling to split a check manually"
                     className="tp-fig-img"
                   />
@@ -1079,20 +1074,20 @@ export default function TempoPage() {
                   <TrustCard
                     label="AI split assist"
                     slot={
-                      <video autoPlay loop muted playsInline style={{ mixBlendMode: "multiply" }}><source src="/images/tempo-tap-ai-check-splitting.mp4" type="video/mp4" /></video>
+                      <video autoPlay loop muted playsInline style={{ mixBlendMode: "multiply" }}><source src="/images/tempo/tempo-tap-ai-check-splitting.mp4" type="video/mp4" /></video>
                     }
                   >Guests describe how they&rsquo;d like to split in natural language — the system handles the rest.</TrustCard>
                   <TrustCard
                     label="Flexible split options"
                     slot={
-                      <video autoPlay loop muted playsInline><source src="/images/tempo-tap-flexible-check-splitting.mp4" type="video/mp4" /></video>
+                      <video autoPlay loop muted playsInline><source src="/images/tempo/tempo-tap-flexible-check-splitting.mp4" type="video/mp4" /></video>
                     }
                   >By guest, equally, or by host — each with a clear summary before confirmation.</TrustCard>
                   <TrustCard
                     label="Contactless payment"
                     slot={
                       <img
-                        src="/images/tempo-tap-contactless-payment.png"
+                        src="/images/tempo/tempo-tap-contactless-payment.webp"
                         alt="TempoTap contactless payment flow"
                         className="tp-contactless"
                         style={{ width: "80%", margin: "0 auto", display: "block" }}
@@ -1144,15 +1139,22 @@ export default function TempoPage() {
             title: "Reflection",
             body: (
               <>
-                <p>Tempo taught me that designing for a high-stakes professional environment means holding two constraints in tension at once: reducing friction for staff without visibly changing what guests experience. Every feature that helped the server had to be invisible to the table. That constraint — not the technology — was the hardest design problem. The most honest moment of the project was Brian&rsquo;s response to TempoChime: he called it &ldquo;really outside the box&rdquo; and acknowledged it would need reality testing. That&rsquo;s the right kind of validation — not uncritical enthusiasm, but genuine interest paired with honest skepticism about what comes next.</p>
-
-                <Rule />
-
                 <h4>Future vision</h4>
                 <p>Tempo is designed to be built in phases: a mobile software version first, then dedicated hardware, then a fully integrated system — with a next-generation Tempo 2.0 on the horizon.</p>
                 <figure className="tp-fig tp-fig--future">
-                  <img src="/images/tempo-future-timeline.svg" alt="Tempo future vision timeline" className="tp-fig-img" />
+                  <img loading="lazy" src="/images/tempo/tempo-future-timeline.svg" alt="Tempo future vision timeline" className="tp-fig-img" />
                 </figure>
+
+                <Rule />
+
+                <p>The brief from NCR Voyix was open-ended: reimagine the restaurant of the future. We started broad &mdash; fast food, small businesses, high-end dining &mdash; and I was initially drawn to automation in fast food. It felt exciting. Then I realized it was also the most obvious answer, the one everyone would reach for. The more interesting constraint was somewhere else.</p>
+                <p style={{ marginTop: "1.25em" }}>What our research surfaced was that high-end dining was quietly struggling. Inflation had thinned margins, labor had become harder to retain, and the thing that makes fine dining worth the price &mdash; the service &mdash; is entirely human. You can&rsquo;t replace that with a robot without destroying the experience you&rsquo;re selling. That&rsquo;s what made the design problem genuinely hard, and genuinely interesting.</p>
+                <p style={{ marginTop: "1.25em" }}>What we built was an integrated system, not a single terminal. The existing POS experience was essentially tab-clicking &mdash; functional, but friction-heavy and disconnected from how service actually flows. Tempo replaced that with interactions that feel natural: voice-to-text, handwriting recognition, AI-coordinated task distribution across the floor. Each module works independently but functions as a whole, keeping the dining room in sync without ever surfacing the technology to the guest.</p>
+                <p style={{ marginTop: "1.25em" }}>It was also the beginning of the AI explosion, and there was something exciting about designing at that moment &mdash; figuring out where AI could genuinely reduce friction versus where it would just get in the way of what makes the experience premium in the first place.</p>
+                <p style={{ marginTop: "1.25em" }}>Tempo taught me that designing for a high-stakes professional environment means holding two constraints in tension at once: reducing friction for staff without visibly changing what guests experience. Every feature that helped the server had to be invisible to the table. That constraint &mdash; not the technology &mdash; was the hardest design problem. The most honest moment of the project was Brian&rsquo;s response to TempoChime: he called it &ldquo;really outside the box&rdquo; and acknowledged it would need reality testing. That&rsquo;s the right kind of validation &mdash; not uncritical enthusiasm, but genuine interest paired with honest skepticism about what comes next.</p>
+
+                <img loading="lazy" src="/images/tempo/tempo-team.webp" alt="Tempo team" style={{ width: "100%", height: "auto", display: "block", marginTop: "2em", borderRadius: 16 }} />
+                <p style={{ fontFamily: "var(--body)", fontSize: 12, color: "var(--text-tertiary)", marginTop: "0.75em", textAlign: "center" }}>Our team after our final presentation at NCR Voyix.</p>
               </>
             ),
           },

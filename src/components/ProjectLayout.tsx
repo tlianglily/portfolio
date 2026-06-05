@@ -307,7 +307,9 @@ export function ProjectLayout({
           .proj-body  { grid-template-columns: 1fr; gap: 36px; }
           .proj-sidebar-col { display: none; }
         }
+        .proj-hero-all-projects { display: none; }
         @media (max-width: 768px) {
+          .proj-hero-all-projects { display: block; position: absolute; top: 88px; left: 24px; font-family: var(--body); font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(248,248,245,0.7); text-decoration: none; white-space: nowrap; z-index: 2; }
           .proj-hero-content { padding: 0 24px; }
           .intro-left { align-items: center; text-align: center; }
           .proj-intro-title-img { margin: 0 auto; }
@@ -326,9 +328,10 @@ export function ProjectLayout({
       {/* ── Hero ── */}
       <div
         className="proj-hero"
-        style={{ backgroundImage: `url(${heroImageUrl})` }}
+        style={{ backgroundImage: `url(${heroImageUrl})`, position: "relative" }}
       >
         <div className="proj-hero-tint" style={{ background: heroTint }} />
+        <Link href="/projects" className="proj-hero-all-projects">← All projects</Link>
       </div>
 
       {/* ── Main content ── */}
@@ -337,10 +340,14 @@ export function ProjectLayout({
         {/* Intro */}
         <div className="proj-intro">
           <div className="intro-left">
-            {titleImageUrl
-              ? <img src={titleImageUrl} alt={title} className="proj-intro-title-img" style={{ maxWidth: "260px", width: "100%", display: "block" }} />
-              : <h1 className="proj-intro-title">{title}</h1>
-            }
+            {titleImageUrl ? (
+              <>
+                <h1 className="sr-only">{title}</h1>
+                <img src={titleImageUrl} alt="" aria-hidden="true" className="proj-intro-title-img" style={{ maxWidth: "260px", width: "100%", display: "block" }} />
+              </>
+            ) : (
+              <h1 className="proj-intro-title">{title}</h1>
+            )}
             <p className="proj-tagline">{tagline}</p>
             {sponsoredBy && (
               <div className="proj-sponsored">
@@ -389,7 +396,7 @@ export function ProjectLayout({
                 <div className="proj-section-body">{body}</div>
                 {imageUrl && (
                   <div className="proj-image" style={imageAspect ? { aspectRatio: imageAspect } : {}}>
-                    <img src={imageUrl} alt={imageAlt ?? ""} />
+                    <img loading="lazy" src={imageUrl} alt={imageAlt ?? ""} />
                   </div>
                 )}
               </div>

@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 
-const BG_IMAGE  = "/images/la-bg.webp";
-const PHONE_1   = "/images/la-phone-1.png";
-const PHONE_2   = "/images/la-phone-2.png";
-const LOGO_ICON = "/images/la-logo.svg";
+const BG_IMAGE  = "/images/la/la-bg.webp";
+const PHONE_1   = "/images/la/la-phone-1.webp";
+const PHONE_2   = "/images/la/la-phone-2.webp";
+const LOGO_ICON = "/images/la/la-logo.svg";
 
 // Spring for elements flying in, smooth ease for colour/gradient
 const SPRING = "cubic-bezier(0.34, 1.15, 0.64, 1)";
@@ -267,7 +267,7 @@ export function LittleAutonomyCard() {
           whiteSpace: "nowrap",
           transition: `top 480ms ${EASE} 40ms`,
         }}>
-          Fall 2025 – Fall 2026
+          Fall 2025 – Spring 2026
         </p>
 
         {/* ── Title ── */}

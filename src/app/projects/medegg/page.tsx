@@ -1,6 +1,10 @@
 import { ProjectLayout } from "@/components/ProjectLayout";
 
-export const metadata = { title: "MedEgg - Lily Liang Portfolio" };
+export const metadata = {
+  title: "MedEgg - Lily Liang Portfolio",
+  description:
+    "A physical kit that prepares children aged 5–12 for surgery before they ever arrive at the hospital — an interactive egg, medical equipment replicas, and instructional cards.",
+};
 
 /* ─── Helpers ────────────────────────────────────────────────────────────── */
 
@@ -32,23 +36,6 @@ function Slot({
   );
 }
 
-function ContribSlot() {
-  return (
-    <div className="me-contrib">
-      <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
-        <path
-          d="M11 2.5a2.121 2.121 0 0 1 3 3L5.5 14 2 15l1-3.5L11 2.5Z"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      To be added
-    </div>
-  );
-}
-
 /* ─── Page ───────────────────────────────────────────────────────────────── */
 
 export default function MedeggPage() {
@@ -61,18 +48,21 @@ export default function MedeggPage() {
         .me-insight {
           font-family: var(--display);
           font-style: italic;
-          font-weight: 900;
-          font-size: clamp(17px, 1.7vw, 22px);
-          line-height: 1.35;
-          letter-spacing: -0.02em;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 1.1;
+          letter-spacing: -0.015em;
           color: var(--text-primary);
           border-left: 3px solid var(--medegg-primary);
-          padding-left: 14px;
+          padding: 12px 16px 12px 15px;
           margin: 28px 0 10px;
+          background: rgba(160, 197, 190, 0.03);
+          border-radius: 0 8px 8px 0;
           font-optical-sizing: none;
           font-variation-settings: "opsz" 144, "WONK" 1;
         }
         .me-insight:first-child { margin-top: 0; }
+        @media (max-width: 768px) { .me-insight { font-size: 18px; } }
 
         /* Section divider */
         .me-rule { height: 1px; background: var(--hairline); margin: 36px 0; }
@@ -318,16 +308,16 @@ export default function MedeggPage() {
           </p>
         }
         sponsoredBy={
-          <img src="/images/logo-cognizant.png" alt="Cognizant" />
+          <img loading="lazy" src="/images/wash-bus/logo-cognizant.png" alt="Cognizant" />
         }
-        heroImageUrl="/images/cover-medegg.webp"
-        titleImageUrl="/images/medegg-logo.webp"
+        heroImageUrl="/images/covers/cover-medegg.webp"
+        titleImageUrl="/images/medegg/medegg-logo.webp"
         heroTint="rgba(30,15,5,0.55)"
         accentVar="var(--medegg-primary)"
         meta={[
           { key: "Duration",        value: "Spring 2022" },
-          { key: "Team",            value: "Lily Liang, Hope Rackers, Meredith [last name], Valerie [last name]" },
-          { key: "My Contribution", value: "[ to be added ]" },
+          { key: "Team",            value: "Lily Liang, Hope Rackers, Meredith Renaud, Valerie Ng" },
+          { key: "My Contribution", value: "Egg concept, physical product design, prototyping (foam modeling, vacuum forming, silicone casting), research" },
           { key: "Outcome",         value: "A three-part physical product system — an equipment kit, interactive egg, and instructional cards — grounded in research with child-life therapists and validated through peer testing" },
         ]}
         sidebarGroups={[
@@ -360,14 +350,14 @@ export default function MedeggPage() {
           title: "Color Mixing Marker",
           year: "Fall 2021",
           href: "/projects/color-mixing-marker",
-          coverUrl: "/images/cmm-banner.webp",
+          coverUrl: "/images/cmm/cmm-banner.webp",
           tint: "rgba(5,10,20,0.35)",
         }}
         nextProject={{
-          title: "Summit Ware",
+          title: "Summitware",
           year: "2024",
           href: "/projects/summit-ware",
-          coverUrl: "/images/cover-summit-ware.webp",
+          coverUrl: "/images/covers/cover-summit-ware.webp",
           tint: "rgba(15,30,15,0.55)",
         }}
         sections={[
@@ -396,13 +386,13 @@ export default function MedeggPage() {
               <>
                 <Insight>Children aren&rsquo;t scared of surgery &mdash; they&rsquo;re scared of what they don&rsquo;t understand</Insight>
                 <div style={{ margin: "24px 0", textAlign: "center" }}>
-                  <img src="/images/medegg-emotional.png" alt="Three bear illustrations labeled Confusion, Loss of Control, and Pressure" className="me-problem-img-sm" style={{ mixBlendMode: "multiply", cursor: "zoom-in" }} data-lightbox />
+                  <img loading="lazy" src="/images/medegg/medegg-emotional.webp" alt="Three bear illustrations labeled Confusion, Loss of Control, and Pressure" className="me-problem-img-sm" style={{ mixBlendMode: "multiply", cursor: "zoom-in" }} data-lightbox />
                 </div>
                 <p>A child facing surgery doesn&rsquo;t arrive at the hospital afraid of the procedure itself. They arrive afraid of the unknown: equipment they&rsquo;ve never seen, sensations they can&rsquo;t anticipate, a body that suddenly doesn&rsquo;t feel like their own. That fear &mdash; rooted in unfamiliarity, not in reality &mdash; is what makes the pre-surgical experience so distressing. The hospital isn&rsquo;t dangerous to them. It just feels that way.</p>
 
                 <Insight>The support exists &mdash; but it&rsquo;s too limited to reach most children</Insight>
                 <div style={{ margin: "24px 0", textAlign: "center" }}>
-                  <img src="/images/medegg-emotions-chart.webp" alt="Emotions Felt chart: children go from Terrified while waiting, to Stressed at home, to No Control in hospital" className="me-problem-img-md" />
+                  <img loading="lazy" src="/images/medegg/medegg-emotions-chart.webp" alt="Emotions Felt chart: children go from Terrified while waiting, to Stressed at home, to No Control in hospital" className="me-problem-img-md" />
                 </div>
                 <p>Child-life therapists are trained to reduce pre-surgical anxiety through education and medical play, and research shows it works. But most hospitals have just one, and their window with each child is brief &mdash; a few minutes before the procedure, when anxiety has already peaked. The education happens too late, in the wrong environment, with too little time to stick.</p>
               </>
@@ -418,7 +408,7 @@ export default function MedeggPage() {
                 <Insight>MedEgg prepares children at home, so the hospital feels familiar</Insight>
                 <p>MedEgg is a physical kit that starts working before surgery day. A child receives the kit at their initial appointment, takes it home, and uses it to learn about the equipment and procedures they&rsquo;ll encounter &mdash; through play, instructional cards, and an AR companion app. When they arrive at the hospital, they bring their egg. It hatches in the pre-op room, revealing the comfort object they carry through the procedure.</p>
                 <div className="me-solution-wrap">
-                  <img src="/images/medegg-components-overview.webp" alt="Full spread of all MedEgg kit components: egg, stethoscope, IV drip, anesthesia mask, cards, backpack" style={{ width: "100%", borderRadius: "12px" }} />
+                  <img loading="lazy" src="/images/medegg/medegg-components-overview.webp" alt="Full spread of all MedEgg kit components: egg, stethoscope, IV drip, anesthesia mask, cards, backpack" style={{ width: "100%", borderRadius: "12px" }} />
                 </div>
               </>
             ),
@@ -448,7 +438,7 @@ export default function MedeggPage() {
                     "The child leaves the hospital healthy after surgery with their stuffed dragon.",
                   ].map((caption, i) => (
                     <div key={i} className="me-storyboard-frame">
-                      <img src={`/images/medegg-storyboard-${i + 1}.webp`} alt={caption} />
+                      <img loading="lazy" src={`/images/medegg/medegg-storyboard-${i + 1}.webp`} alt={caption} />
                       <span className="me-storyboard-num">{i + 1}</span>
                       <p className="me-storyboard-cap">{caption}</p>
                     </div>
@@ -467,7 +457,7 @@ export default function MedeggPage() {
                 <Insight>We started where the fear starts &mdash; with the child</Insight>
                 <p>The project began with a design prompt: how can the Metaverse help prepare children for surgery? We quickly challenged that frame. After interviewing a child-life therapist, surveying parents, and observing pre-surgical experiences, it became clear that the education piece mattered more than the technology. Not every child has access to devices, and anxiety starts long before the hospital. Our solution needed to work earlier, and without tech as a dependency.</p>
                 <div style={{ margin: "24px 0", textAlign: "center" }}>
-                  <img src="/images/medegg-research-scope.png" alt="Interview insights from Ashley McGee, a Child-Life Therapist" style={{ width: "100%", borderRadius: "12px", mixBlendMode: "multiply", cursor: "zoom-in" }} data-lightbox />
+                  <img loading="lazy" src="/images/medegg/medegg-research-scope.webp" alt="Interview insights from Ashley McGee, a Child-Life Therapist" style={{ width: "100%", borderRadius: "12px", mixBlendMode: "multiply", cursor: "zoom-in" }} data-lightbox />
                 </div>
               </>
             ),
@@ -477,7 +467,7 @@ export default function MedeggPage() {
           {
             id: "contribution",
             title: "My Contribution",
-            body: <ContribSlot />,
+            body: <p>I originated the egg concept — the idea that a child could receive an unhatched egg before their surgery date, building positive anticipation as it hatches at the hospital rather than arriving to fear and uncertainty. I led the physical design of the full artifact kit and built all prototypes with Hope using foam modeling, vacuum forming, and silicone casting, with the exception of the bag (Hope) and the activity card (Valerie, who also created all illustrations). Research was a full team effort.</p>,
           },
 
           /* ── THE EGG ──────────────────────────────────────────────────────── */
@@ -490,7 +480,7 @@ export default function MedeggPage() {
                 <p>The egg is the emotional core of MedEgg. Rather than handing a child a pamphlet or a tutorial, we gave them a creature to look after. The egg needs the same things the child will need at the hospital: a stethoscope check, an IV drip, an anesthesia mask. Caring for the egg makes the equipment feel familiar before it becomes real.</p>
 
                 <div className="me-egg-row">
-                  <video autoPlay loop muted playsInline className="me-egg-video"><source src="/images/medegg-egg-reaction.mp4" type="video/mp4" /></video>
+                  <video autoPlay loop muted playsInline className="me-egg-video"><source src="/images/medegg/medegg-egg-reaction.mp4" type="video/mp4" /></video>
                   <div>
                     <Insight>The egg reacts to the equipment, giving children feedback without a screen</Insight>
                     <p style={{ marginTop: "10px" }}>We deliberately avoided putting electronics on the egg itself &mdash; medical environments are sensitive, and we wanted the product to be robust and manufacturable. Instead, the egg uses side-emitting optical fiber to create light responses when equipment is correctly placed. The patterns &mdash; inspired by smoke, water, and heartbeat rhythms &mdash; give children a satisfying signal that they&rsquo;ve done it right, without requiring any digital dependency.</p>
@@ -498,21 +488,21 @@ export default function MedeggPage() {
                 </div>
 
                 <div style={{ margin: "24px 0", textAlign: "center" }}>
-                  <img src="/images/medegg-egg-detail.webp" alt="Egg optical fiber detail — Smoke, Water, and Heart Beat light patterns alongside the egg construction" style={{ width: "100%", borderRadius: "12px" }} />
+                  <img loading="lazy" src="/images/medegg/medegg-egg-detail.webp" alt="Egg optical fiber detail — Smoke, Water, and Heart Beat light patterns alongside the egg construction" style={{ width: "100%", borderRadius: "12px" }} />
                 </div>
 
                 <p className="me-eyebrow">Light interactions</p>
                 <div className="me-grid-3">
                   <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                    <video autoPlay loop muted playsInline style={{ width: "100%", borderRadius: "10px" }}><source src="/images/medegg-gif-stethoscope.mp4" type="video/mp4" /></video>
+                    <video autoPlay loop muted playsInline style={{ width: "100%", borderRadius: "10px" }}><source src="/images/medegg/medegg-gif-stethoscope.mp4" type="video/mp4" /></video>
                     <p className="me-storyboard-cap">Stethoscope → heartbeat light</p>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                    <video autoPlay loop muted playsInline style={{ width: "100%", borderRadius: "10px" }}><source src="/images/medegg-gif-iv.mp4" type="video/mp4" /></video>
+                    <video autoPlay loop muted playsInline style={{ width: "100%", borderRadius: "10px" }}><source src="/images/medegg/medegg-gif-iv.mp4" type="video/mp4" /></video>
                     <p className="me-storyboard-cap">IV drip → blue glow</p>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                    <video autoPlay loop muted playsInline style={{ width: "100%", borderRadius: "10px" }}><source src="/images/medegg-gif-mask.mp4" type="video/mp4" /></video>
+                    <video autoPlay loop muted playsInline style={{ width: "100%", borderRadius: "10px" }}><source src="/images/medegg/medegg-gif-mask.mp4" type="video/mp4" /></video>
                     <p className="me-storyboard-cap">Anesthesia mask → breath</p>
                   </div>
                 </div>
@@ -522,8 +512,8 @@ export default function MedeggPage() {
                 <Insight>Peer testing pushed us to differentiate the interactions more clearly</Insight>
                 <p>In testing, 6 out of 7 peers found the three light responses too similar &mdash; it wasn&rsquo;t immediately clear which equipment was doing what. The slots for placing equipment also needed to stand out more from the surface pattern. Both findings pointed toward the same fix: sharper differentiation across color, response, and affordance, so each piece of equipment has a clearly distinct effect.</p>
                 <div className="me-img-row">
-                  <img src="/images/medegg-user-testing-1.png" alt="User testing session 1" />
-                  <img src="/images/medegg-user-testing-2.png" alt="User testing session 2" />
+                  <img loading="lazy" src="/images/medegg/medegg-user-testing-1.webp" alt="User testing session 1" />
+                  <img loading="lazy" src="/images/medegg/medegg-user-testing-2.webp" alt="User testing session 2" />
                 </div>
               </>
             ),
@@ -539,16 +529,16 @@ export default function MedeggPage() {
                 <p>A child-life therapist told us: most fear is caused by misconceptions. Our job is to correct them. The equipment in MedEgg &mdash; a stethoscope, IV drip, and anesthesia mask &mdash; mirrors what children will actually encounter during their procedure. Each item is sized for a child&rsquo;s hands and designed to interact directly with the egg, making the education tactile rather than instructional.</p>
 
                 <div className="me-grid-3">
-                  <img src="/images/medegg-equip-stethoscope.webp" alt="Stethoscope triggering heartbeat light pattern on the egg"         style={{ width: "100%", borderRadius: "10px", gridColumn: "1 / -1" }} />
-                  <img src="/images/medegg-equip-iv.webp"          alt="IV drip triggering blue glow on the egg"                           style={{ width: "100%", borderRadius: "10px", gridColumn: "1 / -1" }} />
-                  <img src="/images/medegg-equip-mask.webp"        alt="Anesthesia mask triggering breathing light response on the egg"    style={{ width: "100%", borderRadius: "10px", gridColumn: "1 / -1" }} />
+                  <img loading="lazy" src="/images/medegg/medegg-equip-stethoscope.webp" alt="Stethoscope triggering heartbeat light pattern on the egg"         style={{ width: "100%", borderRadius: "10px", gridColumn: "1 / -1" }} />
+                  <img loading="lazy" src="/images/medegg/medegg-equip-iv.webp"          alt="IV drip triggering blue glow on the egg"                           style={{ width: "100%", borderRadius: "10px", gridColumn: "1 / -1" }} />
+                  <img loading="lazy" src="/images/medegg/medegg-equip-mask.webp"        alt="Anesthesia mask triggering breathing light response on the egg"    style={{ width: "100%", borderRadius: "10px", gridColumn: "1 / -1" }} />
                 </div>
 
 
                 <Insight>Medical play turns intimidating procedures into something a child can master</Insight>
                 <p>By letting children use the equipment on the egg, they practice the role of caregiver before becoming the patient. This kind of role reversal builds positive coping &mdash; children who play doctor are less frightened when the doctor plays with them.</p>
                 <div style={{ margin: "20px 0" }}>
-                  <img src="/images/medegg-child-playing.webp" alt="Child playing with the MedEgg kit at home" style={{ width: "100%", borderRadius: "12px" }} />
+                  <img loading="lazy" src="/images/medegg/medegg-child-playing.webp" alt="Child playing with the MedEgg kit at home" style={{ width: "100%", borderRadius: "12px" }} />
                 </div>
               </>
             ),
@@ -565,7 +555,7 @@ export default function MedeggPage() {
 
                 <div className="me-cards-outer">
                   {[
-                    { src: "medegg-card-intro.png",       alt: "Intro card",           label: "Intro" },
+                    { src: "medegg-card-intro.webp",      alt: "Intro card",           label: "Intro" },
                     { src: "medegg-card-stethoscope.webp", alt: "Stethoscope card",     label: "Stethoscope" },
                     { src: "medegg-card-iv.webp",          alt: "IV drip card",         label: "IV Drip" },
                     { src: "medegg-card-mask.webp",        alt: "Anesthesia mask card", label: "Anesthesia Mask" },
@@ -573,7 +563,7 @@ export default function MedeggPage() {
                   ].map(({ src, alt, label }) => (
                     <div key={src} className="me-cards-item">
                       <p style={{ margin: 0, fontSize: "15px", fontWeight: 600, letterSpacing: "0.01em", color: "#3d2b1a", textAlign: "center" }}>{label}</p>
-                      <img src={`/images/${src}`} alt={alt} style={{ width: "100%", borderRadius: "10px", cursor: "zoom-in" }} data-lightbox />
+                      <img loading="lazy" src={`/images/medegg/${src}`} alt={alt} style={{ width: "100%", borderRadius: "10px", cursor: "zoom-in" }} data-lightbox />
                     </div>
                   ))}
                 </div>
@@ -581,9 +571,9 @@ export default function MedeggPage() {
                 <Insight>Peer testing pushed us toward imagery over instruction</Insight>
                 <p>Early feedback told us the cards were too text-heavy and pulled attention away from the play experience. We revised toward imagery-first: more comic panels, less copy, with language only where it earned its place. The goal was a card a seven-year-old could follow independently &mdash; and that a child could pick up mid-play without having to stop and read.</p>
                 <div className="me-img-row">
-                  <img src="/images/medegg-card-v1.png" alt="Early card designs showing Stethoscope and IV Drip cards" />
-                  <img src="/images/medegg-cards-testing-1.png" alt="Child testing the cards with the egg" />
-                  <img src="/images/medegg-cards-testing-2.png" alt="Child testing the cards with the egg" />
+                  <img loading="lazy" src="/images/medegg/medegg-card-v1.webp" alt="Early card designs showing Stethoscope and IV Drip cards" />
+                  <img loading="lazy" src="/images/medegg/medegg-cards-testing-1.webp" alt="Child testing the cards with the egg" />
+                  <img loading="lazy" src="/images/medegg/medegg-cards-testing-2.webp" alt="Child testing the cards with the egg" />
                 </div>
               </>
             ),
@@ -599,7 +589,7 @@ export default function MedeggPage() {
                 <p>The kit arrives in a child-sized backpack so the child carries it &mdash; not the parent. The turquoise color matches the dragon that hatches from the egg, and the interior cavern pattern mimics the dragon&rsquo;s home. Once the egg hatches, the backpack becomes a home for the stuffed dragon comfort object. The same bag that carried the kit to the hospital carries the child&rsquo;s companion home.</p>
 
                 <div style={{ margin: "24px 0" }}>
-                  <img src="/images/medegg-bag.webp" alt="Bag before surgery packed with egg and equipment, and after surgery holding the hatched stuffed dragon" style={{ width: "100%", borderRadius: "12px", cursor: "zoom-in" }} data-lightbox />
+                  <img loading="lazy" src="/images/medegg/medegg-bag.webp" alt="Bag before surgery packed with egg and equipment, and after surgery holding the hatched stuffed dragon" style={{ width: "100%", borderRadius: "12px", cursor: "zoom-in" }} data-lightbox />
                 </div>
               </>
             ),
@@ -609,7 +599,15 @@ export default function MedeggPage() {
           {
             id: "reflection",
             title: "Reflection",
-            body: <ContribSlot />,
+            body: (
+              <>
+                <p>MedEgg was the project I felt most personally invested in, because the egg concept was mine. Taking an idea from a spark to a physical artifact that a child could actually hold and respond to &mdash; that felt meaningful in a way that stayed with me.</p>
+                <p style={{ marginTop: "1.25em" }}>The design work I loved most was working out the interactions between the medical props and the egg itself. Designing for children means designing for delight, and there&rsquo;s something genuinely fun about a system where every element is meant to feel a little magical. The hatching mechanic in particular &mdash; building anticipation rather than dread in the days before surgery &mdash; shaped every subsequent decision about how the artifacts should look and feel.</p>
+                <p style={{ marginTop: "1.25em" }}>The project also taught me something about working under pressure and finding reserves I didn&rsquo;t know I had. When the timeline compressed and the stakes felt high, I learned that I could push further than I expected &mdash; and that my investment in the concept was what made that possible.</p>
+                <img loading="lazy" src="/images/medegg/medegg-team.webp" alt="Lily and Hope at Launchpad" style={{ width: "100%", height: "auto", display: "block", marginTop: "2em", borderRadius: 16 }} />
+                <p style={{ fontFamily: "var(--body)", fontSize: 12, color: "var(--text-tertiary)", marginTop: "0.75em", textAlign: "center" }}>Me and Hope at Launchpad.</p>
+              </>
+            ),
           },
 
         ]}

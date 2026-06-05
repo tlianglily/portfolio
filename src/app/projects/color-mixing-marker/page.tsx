@@ -1,6 +1,10 @@
 import { ProjectLayout } from "@/components/ProjectLayout";
 
-export const metadata = { title: "Color Mixing Marker - Lily Liang Portfolio" };
+export const metadata = {
+  title: "Color Mixing Marker - Lily Liang Portfolio",
+  description:
+    "A color-mixing marker toy that teaches children about color theory through hands-on play. Physical product design and prototyping.",
+};
 
 /* ─── Helpers ────────────────────────────────────────────────────────────── */
 
@@ -40,23 +44,6 @@ function Slot({
   );
 }
 
-function ContribSlot() {
-  return (
-    <div className="cmm-contrib">
-      <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
-        <path
-          d="M11 2.5a2.121 2.121 0 0 1 3 3L5.5 14 2 15l1-3.5L11 2.5Z"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      My contribution — to be added
-    </div>
-  );
-}
-
 /* ─── Page ───────────────────────────────────────────────────────────────── */
 
 export default function ColorMixingMarkerPage() {
@@ -69,18 +56,21 @@ export default function ColorMixingMarkerPage() {
         .cmm-insight {
           font-family: var(--display);
           font-style: italic;
-          font-weight: 900;
-          font-size: clamp(17px, 1.7vw, 22px);
-          line-height: 1.35;
-          letter-spacing: -0.02em;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 1.1;
+          letter-spacing: -0.015em;
           color: var(--text-primary);
           border-left: 3px solid var(--cmm-primary);
-          padding-left: 14px;
+          padding: 12px 16px 12px 15px;
           margin: 28px 0 10px;
+          background: rgba(28, 158, 142, 0.03);
+          border-radius: 0 8px 8px 0;
           font-optical-sizing: none;
           font-variation-settings: "opsz" 144, "WONK" 1;
         }
         .cmm-insight:first-child { margin-top: 0; }
+        @media (max-width: 768px) { .cmm-insight { font-size: 18px; } }
 
         /* ── Section divider ─────────────────────────────────────────── */
         .cmm-rule { height: 1px; background: var(--hairline); margin: 36px 0; }
@@ -217,7 +207,7 @@ export default function ColorMixingMarkerPage() {
             hands-on making experience.
           </p>
         }
-        heroImageUrl="/images/cmm-banner.webp"
+        heroImageUrl="/images/cmm/cmm-banner.webp"
         heroTint="rgba(5,10,20,0.35)"
         accentVar="var(--cmm-primary)"
         meta={[
@@ -234,7 +224,6 @@ export default function ColorMixingMarkerPage() {
               { id: "concept",      label: "Concept" },
               { id: "prototype",    label: "Prototype" },
               { id: "final-design", label: "Final Design" },
-              { id: "reflection",   label: "Reflection" },
             ],
           },
         ]}
@@ -242,14 +231,14 @@ export default function ColorMixingMarkerPage() {
           title: "Horizon",
           year: "2022",
           href: "/projects/horizon",
-          coverUrl: "/images/cover-horizon.webp",
+          coverUrl: "/images/covers/cover-horizon.webp",
           tint: "rgba(10,10,35,0.58)",
         }}
         nextProject={{
-          title: "Medegg",
+          title: "MedEgg",
           year: "2024",
           href: "/projects/medegg",
-          coverUrl: "/images/cover-medegg.webp",
+          coverUrl: "/images/covers/cover-medegg.webp",
           tint: "rgba(30,15,5,0.55)",
         }}
         sections={[
@@ -284,7 +273,7 @@ export default function ColorMixingMarkerPage() {
                 <Insight>Existing toys showed color relationships &mdash; but didn&rsquo;t let children make anything</Insight>
                 <p>Color-mixing toys on the market use overlapping filters, colored glasses, or light boxes to demonstrate how colors combine. They&rsquo;re good at showing the relationship, but the child is a passive observer. The concept here was different: combine learning and making into one object, so children discover color by creating it themselves.</p>
                 <img
-                  src="/images/cmm-existing-toys.png"
+                  src="/images/cmm/cmm-existing-toys.webp"
                   alt="Existing color-mixing toys on the market"
                   style={{ width: "100%", borderRadius: 14, display: "block", margin: "18px 0", mixBlendMode: "multiply" }}
                 />
@@ -295,7 +284,7 @@ export default function ColorMixingMarkerPage() {
                 <p>Five aesthetic directions were explored &mdash; space, woodland, ocean, animal characters, and abstract patterns. The space and rocket direction won because it gave the fin controls a natural home: the rocket&rsquo;s fins became the ink-release mechanism, so the interaction felt like part of the object&rsquo;s character rather than a functional add-on bolted to the side. It also made the marker feel clearly like a toy rather than a school supply.</p>
                 <figure style={{ margin: "18px 0", width: "100%" }}>
                   <img
-                    src="/images/cmm-aesthetic-sketches.png"
+                    src="/images/cmm/cmm-aesthetic-sketches.webp"
                     alt="Five aesthetic direction sketches"
                     style={{ width: "100%", borderRadius: 10, display: "block", mixBlendMode: "multiply" }}
                     data-lightbox
@@ -318,7 +307,7 @@ export default function ColorMixingMarkerPage() {
                 <p>The first model used a modified syringe to test whether multiple ink chambers could fit inside a single marker body and feed into one tip. It confirmed the concept worked spatially, but the push-plunger mechanism required too much force and precision for a young child. That finding drove the shift to a wing-based release system in the next phase.</p>
                 <figure style={{ margin: "18px 0" }}>
                   <img
-                    src="/images/cmm-lofi-model.webp"
+                    src="/images/cmm/cmm-lofi-model.webp"
                     alt="Lo-fidelity syringe model testing multi-chamber concept"
                     style={{ width: "100%", borderRadius: 14, display: "block" }}
                   />
@@ -334,22 +323,22 @@ export default function ColorMixingMarkerPage() {
                 <p>The second iteration lengthened the body, made the transparent upper section more prominent so the ink chambers are visible, and repositioned the wings closer to the tip where the child&rsquo;s fingers naturally rest. These changes made the interaction feel intuitive rather than effortful.</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 16, margin: "18px 0" }}>
                   <figure style={{ margin: 0 }}>
-                    <img src="/images/cmm-prototype-v1.webp"   alt="Iteration 1 — view A" style={{ width: "100%", borderRadius: 10, display: "block", marginBottom: 6 }} />
-                    <img src="/images/cmm-prototype-v1-2.webp" alt="Iteration 1 — view B" style={{ width: "100%", borderRadius: 10, display: "block" }} />
+                    <img loading="lazy" src="/images/cmm/cmm-prototype-v1.webp"   alt="Iteration 1 — view A" style={{ width: "100%", borderRadius: 10, display: "block", marginBottom: 6 }} />
+                    <img loading="lazy" src="/images/cmm/cmm-prototype-v1-2.webp" alt="Iteration 1 — view B" style={{ width: "100%", borderRadius: 10, display: "block" }} />
                     <figcaption style={{ fontFamily: "var(--body)", fontSize: 12, color: "var(--text-tertiary)", marginTop: 8, paddingLeft: 2 }}>
                       Iteration 1 — short fins, initial rocket silhouette
                     </figcaption>
                   </figure>
                   <figure style={{ margin: 0 }}>
-                    <img src="/images/cmm-prototype-v2.webp"   alt="Iteration 2 — view A" style={{ width: "100%", borderRadius: 10, display: "block", marginBottom: 6 }} />
-                    <img src="/images/cmm-prototype-v2-2.webp" alt="Iteration 2 — view B" style={{ width: "100%", borderRadius: 10, display: "block" }} />
+                    <img loading="lazy" src="/images/cmm/cmm-prototype-v2.webp"   alt="Iteration 2 — view A" style={{ width: "100%", borderRadius: 10, display: "block", marginBottom: 6 }} />
+                    <img loading="lazy" src="/images/cmm/cmm-prototype-v2-2.webp" alt="Iteration 2 — view B" style={{ width: "100%", borderRadius: 10, display: "block" }} />
                     <figcaption style={{ fontFamily: "var(--body)", fontSize: 12, color: "var(--text-tertiary)", marginTop: 8, paddingLeft: 2 }}>
                       Iteration 2 — lengthened body, repositioned wings
                     </figcaption>
                   </figure>
                   <figure style={{ margin: 0 }}>
-                    <img src="/images/cmm-hand-hold-1.webp" alt="Hand-hold comparison — V1" style={{ width: "100%", borderRadius: 10, display: "block", marginBottom: 6 }} />
-                    <img src="/images/cmm-hand-hold-2.webp" alt="Hand-hold comparison — V2" style={{ width: "100%", borderRadius: 10, display: "block" }} />
+                    <img loading="lazy" src="/images/cmm/cmm-hand-hold-1.webp" alt="Hand-hold comparison — V1" style={{ width: "100%", borderRadius: 10, display: "block", marginBottom: 6 }} />
+                    <img loading="lazy" src="/images/cmm/cmm-hand-hold-2.webp" alt="Hand-hold comparison — V2" style={{ width: "100%", borderRadius: 10, display: "block" }} />
                     <figcaption style={{ fontFamily: "var(--body)", fontSize: 12, color: "var(--text-tertiary)", marginTop: 8, paddingLeft: 2 }}>
                       V1 vs V2 in hand — grip length and fin placement comparison
                     </figcaption>
@@ -368,7 +357,7 @@ export default function ColorMixingMarkerPage() {
                 <Insight>Wing controls let children release and mix ink in four steps</Insight>
                 <p>In the final interaction, children push a wing down to release ink, hold it to control the amount, and push it back up to stop the flow. Repeating the process with a different primary color creates a mixed color at the tip, ready to draw with.</p>
                 <img
-                  src="/images/cmm-how-it-works.webp"
+                  src="/images/cmm/cmm-how-it-works.webp"
                   alt="How it works — 4-step wing interaction diagram"
                   style={{ width: "100%", borderRadius: 14, display: "block", margin: "18px 0", mixBlendMode: "multiply" }}
                   data-lightbox
@@ -379,7 +368,7 @@ export default function ColorMixingMarkerPage() {
                 <p>The final CAD model shows the rocket-shaped body, transparent upper section that makes the ink chambers visible, three primary-color ink chambers, and the space-themed exterior graphics. The design combines the familiarity of a marker with the imagination of a toy.</p>
                 <figure style={{ margin: "18px 0" }}>
                   <img
-                    src="/images/cmm-cad-exploded.png"
+                    src="/images/cmm/cmm-cad-exploded.webp"
                     alt="Exploded view — components separated to show ink chambers and assembly"
                     style={{ width: "100%", borderRadius: 14, display: "block" }}
                     data-lightbox
@@ -390,7 +379,7 @@ export default function ColorMixingMarkerPage() {
                 </figure>
                 <figure style={{ margin: "12px 0" }}>
                   <img
-                    src="/images/cmm-cad-2.png"
+                    src="/images/cmm/cmm-cad-2.webp"
                     alt="CAD model — alternate angle showing fin and wing detail"
                     style={{ width: "100%", borderRadius: 14, display: "block" }}
                     data-lightbox
@@ -401,7 +390,7 @@ export default function ColorMixingMarkerPage() {
                 </figure>
                 <figure style={{ margin: "12px 0" }}>
                   <img
-                    src="/images/cmm-cad-1.png"
+                    src="/images/cmm/cmm-cad-1.webp"
                     alt="CAD model — rocket body with space-themed exterior graphics"
                     style={{ width: "100%", borderRadius: 14, display: "block" }}
                     data-lightbox
@@ -414,17 +403,6 @@ export default function ColorMixingMarkerPage() {
             ),
           },
 
-          /* ── REFLECTION ─────────────────────────────────────────────── */
-          {
-            id: "reflection",
-            title: "Reflection",
-            body: (
-              <>
-                <p>Color Mixing Marker taught me how a teaching toy can make an abstract concept easier to understand through direct manipulation. The biggest challenge was translating &ldquo;color mixing&rdquo; into a physical mechanism that felt simple enough for a young child but still clearly showed cause and effect &mdash; and the lo-fidelity model was what made that problem visible early enough to solve it.</p>
-                <p>The project also pushed me to think about how form language supports learning. The rocket shape made the marker more playful, while the wing controls turned the functional ink release into part of the toy&rsquo;s character &mdash; so the child isn&rsquo;t operating a mechanism, they&rsquo;re flying a rocket.</p>
-              </>
-            ),
-          },
 
         ]}
       />

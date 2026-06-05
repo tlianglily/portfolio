@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 
-const IMG_FLYER  = "/images/circa-flyer.png";
-const IMG_LAPTOP = "/images/circa-laptop.png";
-const IMG_TABLET = "/images/circa-tablet.png";
-const LOGO_PEACE = "/images/circa-logo-peace.png";
-const LOGO_PENN  = "/images/circa-logo-penn.webp";
+const IMG_FLYER  = "/images/circa/circa-flyer.webp";
+const IMG_LAPTOP = "/images/circa/circa-laptop.webp";
+const IMG_TABLET = "/images/circa/circa-tablet.webp";
+const LOGO_PEACE = "/images/circa/circa-logo-peace.png";
+const LOGO_PENN  = "/images/circa/circa-logo-penn.webp";
 
 const SPRING = "cubic-bezier(0.34, 1.15, 0.64, 1)";
 const EASE   = "cubic-bezier(0.25, 0.46, 0.45, 0.94)";
@@ -91,7 +91,7 @@ export function CIRCACard() {
           transformOrigin: "center center",
           transition: `left 500ms ${SPRING}, top 500ms ${SPRING}, width 500ms ${SPRING}, transform 500ms ${SPRING}`,
         }}>
-          <img src={LOGO_PEACE} alt="PEACE" style={{ width: "100%", height: "auto", objectFit: "contain" }} />
+          <img loading="lazy" src={LOGO_PEACE} alt="PEACE" style={{ width: "100%", height: "auto", objectFit: "contain" }} />
         </div>
 
         {/* ── Penn Medicine logo — flies up and grows on hover ── */}
@@ -105,7 +105,7 @@ export function CIRCACard() {
           transformOrigin: "center center",
           transition: `left 520ms ${SPRING} 30ms, top 520ms ${SPRING} 30ms, width 520ms ${SPRING} 30ms, transform 520ms ${SPRING} 30ms`,
         }}>
-          <img src={LOGO_PENN} alt="Penn Medicine" style={{ width: "100%", objectFit: "contain" }} />
+          <img loading="lazy" src={LOGO_PENN} alt="Penn Medicine" style={{ width: "100%", objectFit: "contain" }} />
         </div>
 
         {/* ── Flyer — flies up-left and tilts on hover ── */}
@@ -120,7 +120,7 @@ export function CIRCACard() {
           transformOrigin: "center center",
           transition: `left 500ms ${SPRING}, top 500ms ${SPRING}, width 500ms ${SPRING}, transform 500ms ${SPRING}`,
         }}>
-          <img src={IMG_FLYER} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          <img loading="lazy" src={IMG_FLYER} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </div>
 
         {/* ── Laptop — flies up-right and tilts on hover ── */}
@@ -135,7 +135,7 @@ export function CIRCACard() {
           transformOrigin: "center center",
           transition: `left 520ms ${SPRING} 30ms, top 520ms ${SPRING} 30ms, width 520ms ${SPRING} 30ms, transform 520ms ${SPRING} 30ms`,
         }}>
-          <img src={IMG_LAPTOP} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          <img loading="lazy" src={IMG_LAPTOP} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </div>
 
         {/* ── Tablet — slides up slightly on hover, no rotation ── */}
@@ -148,7 +148,7 @@ export function CIRCACard() {
           pointerEvents: "none",
           transition: `left 500ms ${SPRING}, top 500ms ${SPRING}, width 500ms ${SPRING}`,
         }}>
-          <img src={IMG_TABLET} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          <img loading="lazy" src={IMG_TABLET} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </div>
 
         {/* ── Gradient fade + frosted glass (retreats on hover) ── */}

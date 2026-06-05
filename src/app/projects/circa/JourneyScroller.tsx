@@ -5,21 +5,21 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 const STEPS = [
   {
     label: "Unsure about pregnancy",
-    chart: "/images/circa-journey-1.svg",
+    chart: "/images/circa/circa-journey-1.svg",
     quote: `"I understand this is largely a thread for very excited pregnant folks, but I fall into the category of every other day I change my mind, and I'm still not sure."`,
     author: "thejaybrayster",
     href: "https://www.reddit.com/r/pregnant/comments/17u6n07/to_keep_or_not_to_keep_this_unexpected_pregnancy/",
   },
   {
     label: "Miscarriage",
-    chart: "/images/circa-journey-2.svg",
+    chart: "/images/circa/circa-journey-2.svg",
     quote: `"I don't know why this is happening. I don't know why my body can't keep a baby."`,
     author: "NegotiationFrosty839",
     href: "https://www.reddit.com/r/pregnant/comments/18kcqxx/im_having_a_miscarriage/",
   },
   {
     label: "Overwhelmed by physical symptoms",
-    chart: "/images/circa-journey-3.svg",
+    chart: "/images/circa/circa-journey-3.svg",
     quote: `"Extreme fatigue, no appetite, muscle aches."`,
     author: "lunarkoko",
     href: "https://www.reddit.com/r/pregnant/comments/1jmxtne/what_are_your_first_trimester_symptoms/",

@@ -1,6 +1,10 @@
 import { ProjectLayout } from "@/components/ProjectLayout";
 
-export const metadata = { title: "Summitware - Lily Liang Portfolio" };
+export const metadata = {
+  title: "Summitware - Lily Liang Portfolio",
+  description:
+    "Ergonomic cookware redesigned for outdoor adventure — lightweight, packable, and built around how people actually cook in the backcountry.",
+};
 
 /* ─── Helpers ────────────────────────────────────────────────────────────── */
 
@@ -47,7 +51,7 @@ function Img({
 }) {
   return (
     <div className={`sw-img-wrap ${className}`}>
-      <img src={src} alt={alt} {...(lightbox ? { "data-lightbox": true } : {})} />
+      <img loading="lazy" src={src} alt={alt} {...(lightbox ? { "data-lightbox": true } : {})} />
       {caption && <p className="sw-img-caption">{caption}</p>}
     </div>
   );
@@ -65,18 +69,21 @@ export default function SummitWarePage() {
         .sw-insight {
           font-family: var(--display);
           font-style: italic;
-          font-weight: 900;
-          font-size: clamp(17px, 1.7vw, 22px);
-          line-height: 1.35;
-          letter-spacing: -0.02em;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 1.1;
+          letter-spacing: -0.015em;
           color: var(--text-primary);
           border-left: 3px solid var(--sw-primary);
-          padding-left: 14px;
+          padding: 12px 16px 12px 15px;
           margin: 28px 0 10px;
+          background: rgba(122, 148, 104, 0.03);
+          border-radius: 0 8px 8px 0;
           font-optical-sizing: none;
           font-variation-settings: "opsz" 144, "WONK" 1;
         }
         .sw-insight:first-child { margin-top: 0; }
+        @media (max-width: 768px) { .sw-insight { font-size: 18px; } }
 
         /* ── Section divider ─────────────────────────────────────────── */
         .sw-rule { height: 1px; background: var(--hairline); margin: 36px 0; }
@@ -245,7 +252,7 @@ export default function SummitWarePage() {
             mindfulness effect with real usability.
           </p>
         }
-        heroImageUrl="/images/cover-summit-ware.webp"
+        heroImageUrl="/images/covers/cover-summit-ware.webp"
         heroTint="rgba(15, 30, 15, 0.55)"
         accentVar="var(--sw-primary)"
         meta={[
@@ -267,17 +274,17 @@ export default function SummitWarePage() {
           },
         ]}
         prevProject={{
-          title: "Medegg",
+          title: "MedEgg",
           year: "2024",
           href: "/projects/medegg",
-          coverUrl: "/images/cover-medegg.webp",
+          coverUrl: "/images/covers/cover-medegg.webp",
           tint: "rgba(30,15,5,0.55)",
         }}
         nextProject={{
           title: "Anyi",
           year: "Fall 2023",
           href: "/projects/anyi",
-          coverUrl: "/images/cover-mahjong-table-set.webp",
+          coverUrl: "/images/covers/cover-mahjong-table-set.webp",
           tint: "rgba(50, 10, 10, 0.55)",
         }}
         sections={[
@@ -291,8 +298,8 @@ export default function SummitWarePage() {
                 <Insight>Most people eat too fast because nothing in their environment asks them to slow down</Insight>
                 <p>Summitware introduces a mountain-like sculptural pattern inside the bowl that adds gentle resistance when scooping. The pattern prompts the diner to navigate around it, slowing their pace and drawing attention back to eating — without any instruction.</p>
                 <Img
-                  src="/images/summit-ware-overview.webp"
-                  alt="Summit Ware bowl overview render"
+                  src="/images/summit-ware/summit-ware-overview.webp"
+                  alt="Summitware bowl overview render"
                   className="sw-img--crop-top"
                   lightbox
                 />
@@ -310,15 +317,15 @@ export default function SummitWarePage() {
                 <p>Early ideation spanned bent utensils, obstacle-filled bowls, and timed covers. Sketch models in clay and paper narrowed the direction — working physically revealed how surfaces felt in hand in ways drawing couldn&rsquo;t. Twelve form silhouettes were explored before landing on a wide, shallow bowl with a clean exterior that puts all visual interest inside.</p>
 
                 <Img
-                  src="/images/summit-ware-ideation.png"
-                  alt="Summit Ware ideation sketches exploring slow-eating bowl concepts"
+                  src="/images/summit-ware/summit-ware-ideation.webp"
+                  alt="Summitware ideation sketches exploring slow-eating bowl concepts"
                   className="sw-img--blend"
                   caption="Early concept sketches explored ways to slow eating through portioning, friction, timed access, and visual perception."
                   lightbox
                 />
                 <Img
-                  src="/images/summit-ware-form-exploration.webp"
-                  alt="Summit Ware form exploration models and texture studies"
+                  src="/images/summit-ware/summit-ware-form-exploration.webp"
+                  alt="Summitware form exploration models and texture studies"
                   className="sw-img--blend"
                   caption="Material studies and quick physical models tested texture, grip, bowl proportion, and how different interior obstacles changed the eating experience."
                   lightbox
@@ -337,21 +344,21 @@ export default function SummitWarePage() {
 
                 <div className="sw-v-grid">
                   <div className="sw-v-col">
-                    <Img src="/images/summit-ware-v1.webp" alt="Summit Ware version 1 model" />
+                    <Img src="/images/summit-ware/summit-ware-v1.webp" alt="Summitware version 1 model" />
                     <div className="sw-v-cap">
                       <span className="sw-tag sw-tag--before">Version 1</span>
                       <p>Pattern across the entire bottom — too restrictive, and the solid base made it un-stackable.</p>
                     </div>
                   </div>
                   <div className="sw-v-col">
-                    <Img src="/images/summit-ware-v2.webp" alt="Summit Ware version 2 model" />
+                    <Img src="/images/summit-ware/summit-ware-v2.webp" alt="Summitware version 2 model" />
                     <div className="sw-v-cap">
                       <span className="sw-tag sw-tag--mid">Version 2</span>
                       <p>Pattern centered and mountains hollowed — better balance, but sharp edges created more friction than intended.</p>
                     </div>
                   </div>
                   <div className="sw-v-col">
-                    <Img src="/images/summit-ware-v3.webp" alt="Summit Ware version 3 model" />
+                    <Img src="/images/summit-ware/summit-ware-v3.webp" alt="Summitware version 3 model" />
                     <div className="sw-v-cap">
                       <span className="sw-tag sw-tag--after">Version 3</span>
                       <p>Softened curves: scooping became intuitive without losing the challenge that makes the bowl work.</p>
@@ -386,8 +393,8 @@ export default function SummitWarePage() {
                   </div>
                 </div>
                 <Img
-                  src="/images/summit-ware-user-testing.webp"
-                  alt="User testing photos showing Summit Ware in use"
+                  src="/images/summit-ware/summit-ware-user-testing.webp"
+                  alt="User testing photos showing Summitware in use"
                   lightbox
                 />
               </>
@@ -401,17 +408,17 @@ export default function SummitWarePage() {
             body: (
               <>
                 <Img
-                  src="/images/summit-ware-rendering-4.webp"
-                  alt="Top-down Summit Ware render with food"
+                  src="/images/summit-ware/summit-ware-rendering-4.webp"
+                  alt="Top-down Summitware render with food"
                   lightbox
                 />
                 <div className="sw-render-grid">
-                  <Img src="/images/summit-ware-rendering-2.webp" alt="Summit Ware render with spoon and rice" lightbox />
-                  <Img src="/images/summit-ware-rendering-3.webp" alt="Summit Ware render in dining context" lightbox />
+                  <Img src="/images/summit-ware/summit-ware-rendering-2.webp" alt="Summitware render with spoon and rice" lightbox />
+                  <Img src="/images/summit-ware/summit-ware-rendering-3.webp" alt="Summitware render in dining context" lightbox />
                 </div>
                 <Img
-                  src="/images/summit-ware-rendering-details.png"
-                  alt="Summit Ware rendering details"
+                  src="/images/summit-ware/summit-ware-rendering-details.webp"
+                  alt="Summitware rendering details"
                   lightbox
                 />
               </>

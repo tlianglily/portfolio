@@ -1,6 +1,10 @@
 import { ProjectLayout } from "@/components/ProjectLayout";
 
-export const metadata = { title: "Horizon - Lily Liang Portfolio" };
+export const metadata = {
+  title: "Horizon - Lily Liang Portfolio",
+  description:
+    "A smart countdown timer and alarm system designed for the bedroom — physical product design with embedded electronics and custom light interactions.",
+};
 
 /* ─── Helpers ────────────────────────────────────────────────────────────── */
 
@@ -52,18 +56,21 @@ export default function HorizonPage() {
         .hz-insight {
           font-family: var(--display);
           font-style: italic;
-          font-weight: 900;
-          font-size: clamp(17px, 1.7vw, 22px);
-          line-height: 1.35;
-          letter-spacing: -0.02em;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 1.1;
+          letter-spacing: -0.015em;
           color: var(--text-primary);
           border-left: 3px solid var(--horizon-primary);
-          padding-left: 14px;
+          padding: 12px 16px 12px 15px;
           margin: 28px 0 10px;
+          background: rgba(201, 121, 65, 0.03);
+          border-radius: 0 8px 8px 0;
           font-optical-sizing: none;
           font-variation-settings: "opsz" 144, "WONK" 1;
         }
         .hz-insight:first-child { margin-top: 0; }
+        @media (max-width: 768px) { .hz-insight { font-size: 18px; } }
 
         /* Section divider */
         .hz-rule { height: 1px; background: var(--hairline); margin: 36px 0; }
@@ -266,7 +273,7 @@ export default function HorizonPage() {
             brightens into warm tones &mdash; a sunrise simulation instead of an alarm sound.
           </p>
         }
-        heroImageUrl="/images/cover-horizon.webp"
+        heroImageUrl="/images/covers/cover-horizon.webp"
         heroTint="rgba(10,10,35,0.58)"
         accentVar="var(--horizon-primary)"
         meta={[
@@ -283,7 +290,6 @@ export default function HorizonPage() {
               { id: "concept",       label: "Concept" },
               { id: "prototype",     label: "Prototype" },
               { id: "final-design",  label: "Final Design" },
-              { id: "reflection",    label: "Reflection" },
             ],
           },
         ]}
@@ -291,14 +297,14 @@ export default function HorizonPage() {
           title: "Wash Bus",
           year: "2023",
           href: "/projects/wash-bus",
-          coverUrl: "/images/cover-wash-bus.webp",
+          coverUrl: "/images/covers/cover-wash-bus.webp",
           tint: "rgba(10,25,45,0.55)",
         }}
         nextProject={{
           title: "Color Mixing Marker",
           year: "Fall 2021",
           href: "/projects/color-mixing-marker",
-          coverUrl: "/images/cmm-banner.webp",
+          coverUrl: "/images/cmm/cmm-banner.webp",
           tint: "rgba(5,10,20,0.35)",
         }}
         sections={[
@@ -320,7 +326,7 @@ export default function HorizonPage() {
                 <Insight>A sleep timer that turns time into a quiet light experience</Insight>
                 <p>Horizon replaces the alarm clock&rsquo;s abrupt jolt with something quieter. Rotate the sun to set a timer from 30 minutes to 10 hours. As time passes, the landscape lights up layer by layer &mdash; a soft visual cue readable at a glance without checking a phone. When the timer ends, the sun fills with warm light and gradually brightens, waking the user through a sunrise simulation rather than a sound.</p>
                 <div className="hz-img-wrap">
-                  <img src="/images/horizon-hero-render.webp" alt="Horizon on a bedside table — sunrise simulation in context" data-lightbox />
+                  <img src="/images/horizon/horizon-hero-render.webp" alt="Horizon on a bedside table — sunrise simulation in context" data-lightbox />
                 </div>
               </>
             ),
@@ -337,13 +343,13 @@ export default function HorizonPage() {
                 <div className="hz-pair">
                   <div className="hz-fig">
                     <div className="hz-img-wrap">
-                      <img src="/images/horizon-sketch-countdown.webp" alt="Celebration countdown sketch — hot air balloon direction" data-lightbox />
+                      <img loading="lazy" src="/images/horizon/horizon-sketch-countdown.webp" alt="Celebration countdown sketch — hot air balloon direction" data-lightbox />
                     </div>
                     <span className="hz-figcap">Celebration Countdown</span>
                   </div>
                   <div className="hz-fig">
                     <div className="hz-img-wrap">
-                      <img src="/images/horizon-sketch-sleep-timer.webp" alt="Sleep timer concept sketch — horizon / mountain metaphor" data-lightbox />
+                      <img loading="lazy" src="/images/horizon/horizon-sketch-sleep-timer.webp" alt="Sleep timer concept sketch — horizon / mountain metaphor" data-lightbox />
                     </div>
                     <span className="hz-figcap">Sleep Timer</span>
                   </div>
@@ -356,19 +362,19 @@ export default function HorizonPage() {
                 <div className="hz-trio">
                   <div className="hz-fig">
                     <div className="hz-img-wrap">
-                      <img src="/images/horizon-state-1.webp" alt="Set time — sun and base layer lit" data-lightbox />
+                      <img loading="lazy" src="/images/horizon/horizon-state-1.webp" alt="Set time — sun and base layer lit" data-lightbox />
                     </div>
                     <span className="hz-figcap">Set time</span>
                   </div>
                   <div className="hz-fig">
                     <div className="hz-img-wrap">
-                      <img src="/images/horizon-state-2.webp" alt="Countdown — landscape layers lighting up" data-lightbox />
+                      <img loading="lazy" src="/images/horizon/horizon-state-2.webp" alt="Countdown — landscape layers lighting up" data-lightbox />
                     </div>
                     <span className="hz-figcap">Countdown</span>
                   </div>
                   <div className="hz-fig">
                     <div className="hz-img-wrap">
-                      <img src="/images/horizon-state-3.webp" alt="Sunrise — sun glowing pink and warm" data-lightbox />
+                      <img loading="lazy" src="/images/horizon/horizon-state-3.webp" alt="Sunrise — sun glowing pink and warm" data-lightbox />
                     </div>
                     <span className="hz-figcap">Sunrise</span>
                   </div>
@@ -388,13 +394,13 @@ export default function HorizonPage() {
                 <div className="hz-pair">
                   <div className="hz-fig">
                     <div className="hz-img-wrap">
-                      <img src="/images/horizon-proto-bench.webp" alt="Electronics bench setup — Arduino, LED strip, and rotary encoder" data-lightbox />
+                      <img loading="lazy" src="/images/horizon/horizon-proto-bench.webp" alt="Electronics bench setup — Arduino, LED strip, and rotary encoder" data-lightbox />
                     </div>
                     <span className="hz-figcap">Electronics setup</span>
                   </div>
                   <div className="hz-fig">
                     <div className="hz-img-wrap">
-                      <img src="/images/horizon-proto-electronics.webp" alt="LED sequence testing — layer-by-layer color behavior on flat cardboard" data-lightbox />
+                      <img loading="lazy" src="/images/horizon/horizon-proto-electronics.webp" alt="LED sequence testing — layer-by-layer color behavior on flat cardboard" data-lightbox />
                     </div>
                     <span className="hz-figcap">Sequence testing</span>
                   </div>
@@ -407,13 +413,13 @@ export default function HorizonPage() {
                 <div className="hz-pair">
                   <div className="hz-fig">
                     <div className="hz-img-wrap">
-                      <img src="/images/horizon-proto-cardboard.webp" alt="Cardboard landscape prototype — layered mountain profiles with LEDs threaded through" data-lightbox />
+                      <img loading="lazy" src="/images/horizon/horizon-proto-cardboard.webp" alt="Cardboard landscape prototype — layered mountain profiles with LEDs threaded through" data-lightbox />
                     </div>
                     <span className="hz-figcap">Cardboard landscape prototype</span>
                   </div>
                   <div className="hz-fig">
                     <div className="hz-img-wrap">
-                      <img src="/images/horizon-proto-led-test.webp" alt="Fully assembled cardboard model — sun, landscape, and base" data-lightbox />
+                      <img loading="lazy" src="/images/horizon/horizon-proto-led-test.webp" alt="Fully assembled cardboard model — sun, landscape, and base" data-lightbox />
                     </div>
                     <span className="hz-figcap">Fully assembled cardboard model</span>
                   </div>
@@ -431,14 +437,14 @@ export default function HorizonPage() {
                 <h4>How it works</h4>
                 <div className="hz-hiw">
                   <div className="hz-hiw-card">
-                    <img src="/images/horizon-set.webp" alt="Set the time — rotate the sun on the back" />
+                    <img loading="lazy" src="/images/horizon/horizon-set.webp" alt="Set the time — rotate the sun on the back" />
                     <div className="hz-hiw-label">
                       <strong>Set the time</strong>
                       Rotate the sun on the back to set the time.
                     </div>
                   </div>
                   <div className="hz-hiw-card">
-                    <img src="/images/horizon-press.webp" alt="Start / Resume — press on the sun" />
+                    <img loading="lazy" src="/images/horizon/horizon-press.webp" alt="Start / Resume — press on the sun" />
                     <div className="hz-hiw-label">
                       <strong>Start / Resume</strong>
                       Press on the sun to start or resume.
@@ -451,32 +457,15 @@ export default function HorizonPage() {
                 <h4>What it looks like</h4>
                 <p>A layered landscape form with side-lit LEDs running through the mountain profiles and a circular sun as the main control. The base houses the Arduino board and power connection; the acrylic sun diffuses the LED ring into the soft glow used for both countdown and sunrise modes.</p>
                 <div className="hz-img-wrap">
-                  <img src="/images/horizon-state-3.webp" alt="Sunrise — sun glowing pink and warm" data-lightbox />
+                  <img loading="lazy" src="/images/horizon/horizon-state-3.webp" alt="Sunrise — sun glowing pink and warm" data-lightbox />
                 </div>
                 <div className="hz-img-wrap">
-                  <img src="/images/horizon-schematic.webp" alt="Labeled schematic — Rotary Encoder, Side-Lit LED, Arduino Board, Power Cord" data-lightbox />
+                  <img loading="lazy" src="/images/horizon/horizon-schematic.webp" alt="Labeled schematic — Rotary Encoder, Side-Lit LED, Arduino Board, Power Cord" data-lightbox />
                 </div>
               </>
             ),
           },
 
-          /* ── REFLECTION ──────────────────────────────────────────────────── */
-          {
-            id: "reflection",
-            title: "Reflection",
-            body: (
-              <p>
-                Horizon taught me that form, light, and interaction logic have to develop together.
-                The celebration countdown showed what happens when the form is neutral &mdash; the
-                concept has nowhere to land. The horizon metaphor worked because it wasn&rsquo;t a
-                visual choice; it was the interaction logic made physical. The layers are the timer.
-                The sun is the control. The sunrise is the alarm. Building the electronics on flat
-                cardboard before cutting the landscape meant the light behavior was proven before the
-                form was committed. That sequence &mdash; prove the behavior, then prove the form
-                &mdash; is something I&rsquo;d carry into any future electronics project.
-              </p>
-            ),
-          },
 
         ]}
       />

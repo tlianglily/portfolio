@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 
-const BG_IMAGE    = "/images/tempo-bg.webp";
-const IMG_WRIST   = "/images/tempo-wrist.png";
-const IMG_PHONE   = "/images/tempo-phone.png";
-const IMG_TABLET  = "/images/tempo-tablet.png";
-const LOGO_DEF    = "/images/tempo-logo-def.svg";  // default: black
-const LOGO_HOV    = "/images/tempo-logo-hov.svg";  // hover: repositioned variant
+const BG_IMAGE    = "/images/tempo/tempo-bg.webp";
+const IMG_WRIST   = "/images/tempo/tempo-wrist.webp";
+const IMG_PHONE   = "/images/tempo/tempo-phone.webp";
+const IMG_TABLET  = "/images/tempo/tempo-tablet.webp";
+const LOGO_DEF    = "/images/tempo/tempo-logo-def.svg";  // default: black
+const LOGO_HOV    = "/images/tempo/tempo-logo-hov.svg";  // hover: repositioned variant
 
 const SPRING = "cubic-bezier(0.34, 1.15, 0.64, 1)";
 const EASE   = "cubic-bezier(0.25, 0.46, 0.45, 0.94)";
@@ -76,7 +76,7 @@ export function TempoCard() {
           top: "-11.2%", left: 0, right: 0, bottom: 0,
           borderRadius: 25, overflow: "hidden",
         }}>
-          <img src={BG_IMAGE} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          <img loading="lazy" src={BG_IMAGE} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
           <div style={{ position: "absolute", inset: 0, background: "rgba(95,36,159,0.1)" }} />
         </div>
 
@@ -130,7 +130,7 @@ export function TempoCard() {
           pointerEvents: "none",
           transition: `left 500ms ${SPRING}, top 500ms ${SPRING}, width 500ms ${SPRING}, height 500ms ${SPRING}`,
         }}>
-          <img src={IMG_WRIST} alt="" style={{
+          <img loading="lazy" src={IMG_WRIST} alt="" style={{
             width: "92%", height: "65%",
             objectFit: "cover", flexShrink: 0,
             transform: `rotate(${hovered ? "14.76deg" : "7.85deg"})`,
@@ -148,7 +148,7 @@ export function TempoCard() {
           pointerEvents: "none",
           transition: `left 520ms ${SPRING} 30ms, top 520ms ${SPRING} 30ms, width 520ms ${SPRING} 30ms`,
         }}>
-          <img src={IMG_PHONE} alt="" style={{
+          <img loading="lazy" src={IMG_PHONE} alt="" style={{
             width: "100%", height: "100%", objectFit: "cover",
             transform: `rotate(${hovered ? "60deg" : "0deg"})`,
             transition: `transform 520ms ${SPRING} 30ms`,
@@ -165,7 +165,7 @@ export function TempoCard() {
           pointerEvents: "none",
           transition: `left 500ms ${SPRING}, top 500ms ${SPRING}, width 500ms ${SPRING}`,
         }}>
-          <img src={IMG_TABLET} alt="" style={{
+          <img loading="lazy" src={IMG_TABLET} alt="" style={{
             width: "100%", height: "100%", objectFit: "cover",
             transform: `rotate(${hovered ? "8.93deg" : "0deg"})`,
             transition: `transform 500ms ${SPRING}`,
@@ -266,7 +266,7 @@ export function TempoCard() {
           whiteSpace: "nowrap",
           transition: `top 480ms ${EASE} 20ms`,
         }}>
-          Innovative POS and communication system for future restaurant.
+          Innovative POS and communication system for future high-end restaurants.
         </p>
 
       </div>
