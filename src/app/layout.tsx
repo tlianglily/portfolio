@@ -17,10 +17,11 @@ export const metadata: Metadata = {
     "Product designer based in Philadelphia. Master of Integrated Product Design, Penn. Previously Georgia Tech Industrial Design.",
   icons: {
     icon: [
+      { url: "/favicon.ico" },
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/icon.png", type: "image/png" },
     ],
-    shortcut: "/icon.png",
+    shortcut: "/favicon.ico",
     apple: "/apple-icon.png",
   },
   openGraph: {
