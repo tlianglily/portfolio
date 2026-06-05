@@ -22,40 +22,6 @@ export function TempoCard() {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <>
-      <style>{`
-        .tempo-card { container-type: inline-size; }
-
-        @media (max-width: 600px) {
-          .tempo-card {
-            aspect-ratio: auto !important;
-            height: auto !important;
-            border-radius: 16px !important;
-            overflow: hidden !important;
-          }
-          .tempo-bg { position: relative !important; top: 0 !important; height: 200px !important; border-radius: 0 !important; }
-          .tempo-product-img,
-          .tempo-wordmark { display: none !important; }
-          .tempo-fade {
-            position: relative !important;
-            top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
-            height: auto !important;
-            padding: 16px 20px 24px !important;
-            border-radius: 0 !important;
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 8px !important;
-            -webkit-backdrop-filter: none !important;
-            backdrop-filter: none !important;
-            background: #f8f8f5 !important;
-          }
-          .tempo-tag   { position: relative !important; top: auto !important; left: auto !important; transform: none !important; display: inline-block !important; }
-          .tempo-date  { position: relative !important; top: auto !important; right: auto !important; font-size: 13px !important; text-align: left !important; }
-          .tempo-title { position: relative !important; top: auto !important; right: auto !important; font-size: 26px !important; text-align: left !important; white-space: normal !important; color: var(--text-primary) !important; }
-          .tempo-desc  { position: relative !important; top: auto !important; right: auto !important; left: auto !important; font-size: 15px !important; text-align: left !important; white-space: normal !important; }
-        }
-      `}</style>
-
       <div
         className="tempo-card"
         style={{
@@ -270,6 +236,5 @@ export function TempoCard() {
         </p>
 
       </div>
-    </>
   );
 }

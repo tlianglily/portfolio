@@ -251,6 +251,7 @@ export default function About() {
           .about-hero-name { margin-bottom: 0; }
           .about-portrait { max-width: 100%; aspect-ratio: 4/5; }
           .about-section { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
+          .about-content { max-width: 100%; }
           .about-aside { position: static; flex-direction: row; align-items: baseline; gap: 16px; flex-wrap: wrap; }
           .about-aside-title { font-size: 20px; }
           .about-media.two { grid-template-columns: 1fr 1fr; }
@@ -382,7 +383,7 @@ export default function About() {
             </div>
             <div className="about-content">
               <p>But not all of my work starts from a problem. Anyi, a mahjong table set, started from my own cultural background. Adaptex, a conceptual venture, started from a material. Neither was problem-driven — but both taught me something the problem-solving frame can&apos;t: that design can begin anywhere, as long as it ends somewhere meaningful. Whatever the starting point, the question is always the same — does this carry enough value that someone would choose it?</p>
-              <p>That question is what pulled me toward Penn&apos;s Master of Integrated Product Design. A good idea sitting on a shelf helps nobody. For design to matter in the real world, it has to carry business value — it has to sell. I spent two years learning how design, engineering, and business fit together, and left with an engineering entrepreneurship certificate and a much clearer picture of what it takes to get something made.</p>
+              <p>That question is what pulled me toward Penn&apos;s Master of Integrated Product Design. A good idea sitting on a shelf helps nobody. For design to matter in the real world, it has to create value, work within real constraints, and make it beyond the concept stage. I spent two years learning how design, engineering, and business fit together, and left with an engineering entrepreneurship certificate and a much clearer picture of what it takes to get something made.</p>
               <div className="about-media two">
                 <div className="about-media-item">
                   <img loading="lazy" src="/images/about/about-penn-grad.webp" alt="Graduating from Penn Engineering, May 2026" />
@@ -406,7 +407,7 @@ export default function About() {
               <h2 className="about-aside-title">Beyond design</h2>
             </div>
             <div className="about-content">
-              <p>When I was choosing a college major, I almost picked computer science. I&apos;ve always seen technical skills as a way to bring ideas to life — but I decided the ideas came first. That instinct feels more relevant now than ever. A lot of people are unsettled by AI. I see it as the thing that finally closes the gap between having an idea and being able to build it. I built this entire portfolio using Claude Code — animations, interactions, effects that would have taken months before. That&apos;s not a shortcut. That&apos;s what it looks like when a designer gets the tools to match their ambition.
+              <p>When I was choosing a college major, I almost picked computer science. I&apos;ve always seen technical skills as a way to bring ideas to life — but I decided the ideas came first. That instinct feels more relevant now than ever. A lot of people are unsettled by AI. I see it as the thing that finally closes the gap between having an idea and being able to build it. I built this entire portfolio using Claude Code — animations, interactions, effects that would have taken months before. That&apos;s not a shortcut. That&apos;s what it looks like when a designer gets the tools to match their ambition.{" "}
                 <span className="kicker">I&apos;m still here for the ideas. Now I can actually build them too.</span>
               </p>
             </div>

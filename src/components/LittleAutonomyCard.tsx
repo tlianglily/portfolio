@@ -39,77 +39,6 @@ export function LittleAutonomyCard() {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap');
-
-        /* container-type enables cqi units (font sizes relative to card width) */
-        .la-card { container-type: inline-size; }
-
-        /* ── Mobile: stacked layout ── */
-        @media (max-width: 600px) {
-          .la-card {
-            aspect-ratio: auto !important;
-            height: auto !important;
-            border-radius: 16px !important;
-            overflow: hidden !important;
-          }
-          .la-bg {
-            position: relative !important;
-            top: 0 !important;
-            height: 200px !important;
-            border-radius: 0 !important;
-          }
-          .la-phone-1-wrap,
-          .la-phone-2-wrap,
-          .la-wordmark-icon,
-          .la-wordmark-text { display: none !important; }
-          .la-fade {
-            position: relative !important;
-            top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
-            height: auto !important;
-            padding: 16px 20px 24px !important;
-            border-radius: 0 !important;
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 8px !important;
-            -webkit-backdrop-filter: none !important;
-            backdrop-filter: none !important;
-            background: #f8f8f5 !important;
-          }
-          .la-tag {
-            position: relative !important;
-            top: auto !important; left: auto !important;
-            transform: none !important;
-            display: inline-block !important;
-          }
-          .la-mobile-tags { display: flex !important; flex-wrap: wrap !important; gap: 6px !important; }
-          .la-title {
-            position: relative !important;
-            top: auto !important; left: auto !important;
-            font-size: 26px !important;
-            color: #2c2c2c !important;
-            white-space: normal !important;
-          }
-          .la-date {
-            position: relative !important;
-            top: auto !important; left: auto !important;
-            font-size: 13px !important;
-          }
-          .la-desc {
-            position: relative !important;
-            top: auto !important; left: auto !important;
-            font-size: 15px !important;
-            white-space: normal !important;
-          }
-        }
-      `}</style>
-
-      {/*
-        Outer div: overflow:visible lets phones bleed above.
-        The article in page.tsx has paddingTop/marginTop to
-        reserve that space in the document flow.
-      */}
       <div
         className="la-card"
         style={{
@@ -314,6 +243,5 @@ export function LittleAutonomyCard() {
         </div>
 
       </div>
-    </>
   );
 }

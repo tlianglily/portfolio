@@ -879,7 +879,7 @@ export default function CircaPage() {
                         <span className="cp-method-name">{name}</span>
                         <div className="cp-method-stat-row">
                           <span className="cp-method-stat">{stat}</span>
-                          <span className="cp-method-sub">{sub}</span>
+                          <span className="cp-method-sub">{stat ? " " : ""}{sub}</span>
                         </div>
                       </div>
                     </div>

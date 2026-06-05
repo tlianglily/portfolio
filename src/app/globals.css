@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,300,0..1;0,9..144,400,0..1;0,9..144,600,0..1;0,9..144,900,0..1;1,9..144,300,0..1;1,9..144,400,0..1;1,9..144,600,0..1;1,9..144,900,0..1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Source+Serif+4:ital,wght@1,700&display=swap');
 
 :root {
@@ -172,3 +173,46 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Image lightbox ──────────────────────────────────────────── */
 img[data-lightbox] { cursor: zoom-in; }
+
+/* ── Homepage project cards ─────────────────────────────────── */
+
+/* Little Autonomy card */
+.la-card { container-type: inline-size; }
+@media (max-width: 600px) {
+  .la-card { aspect-ratio: auto !important; height: auto !important; border-radius: 16px !important; overflow: hidden !important; }
+  .la-bg { position: relative !important; top: 0 !important; height: 200px !important; border-radius: 0 !important; }
+  .la-phone-1-wrap, .la-phone-2-wrap, .la-wordmark-icon, .la-wordmark-text { display: none !important; }
+  .la-fade { position: relative !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; height: auto !important; padding: 16px 20px 24px !important; border-radius: 0 !important; display: flex !important; flex-direction: column !important; gap: 8px !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; background: #f8f8f5 !important; }
+  .la-tag { position: relative !important; top: auto !important; left: auto !important; transform: none !important; display: inline-block !important; }
+  .la-mobile-tags { display: flex !important; flex-wrap: wrap !important; gap: 6px !important; }
+  .la-title { position: relative !important; top: auto !important; left: auto !important; font-size: 26px !important; color: #2c2c2c !important; white-space: normal !important; }
+  .la-date { position: relative !important; top: auto !important; left: auto !important; font-size: 13px !important; }
+  .la-desc { position: relative !important; top: auto !important; left: auto !important; font-size: 15px !important; white-space: normal !important; }
+}
+
+/* CIRCA card */
+.circa-card { container-type: inline-size; }
+@media (max-width: 600px) {
+  .circa-card { aspect-ratio: auto !important; height: auto !important; border-radius: 16px !important; overflow: hidden !important; }
+  .circa-bg { position: relative !important; top: 0 !important; height: 200px !important; border-radius: 0 !important; }
+  .circa-product-img, .circa-logos { display: none !important; }
+  .circa-fade { position: relative !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; height: auto !important; padding: 16px 20px 24px !important; border-radius: 0 !important; display: flex !important; flex-direction: column !important; gap: 8px !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; background: #f8f8f5 !important; }
+  .circa-tag { position: relative !important; top: auto !important; left: auto !important; transform: none !important; display: inline-block !important; }
+  .circa-tags-mobile { display: flex !important; flex-wrap: wrap !important; gap: 6px !important; }
+  .circa-date { position: relative !important; top: auto !important; right: auto !important; font-size: 13px !important; text-align: left !important; }
+  .circa-title { position: relative !important; top: auto !important; right: auto !important; font-size: 26px !important; text-align: left !important; white-space: normal !important; color: var(--text-primary) !important; }
+  .circa-desc { position: relative !important; top: auto !important; right: auto !important; left: auto !important; font-size: 15px !important; text-align: left !important; white-space: normal !important; }
+}
+
+/* Tempo card */
+.tempo-card { container-type: inline-size; }
+@media (max-width: 600px) {
+  .tempo-card { aspect-ratio: auto !important; height: auto !important; border-radius: 16px !important; overflow: hidden !important; }
+  .tempo-bg { position: relative !important; top: 0 !important; height: 200px !important; border-radius: 0 !important; }
+  .tempo-product-img, .tempo-wordmark { display: none !important; }
+  .tempo-fade { position: relative !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; height: auto !important; padding: 16px 20px 24px !important; border-radius: 0 !important; display: flex !important; flex-direction: column !important; gap: 8px !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; background: #f8f8f5 !important; }
+  .tempo-tag { position: relative !important; top: auto !important; left: auto !important; transform: none !important; display: inline-block !important; }
+  .tempo-date { position: relative !important; top: auto !important; right: auto !important; font-size: 13px !important; text-align: left !important; }
+  .tempo-title { position: relative !important; top: auto !important; right: auto !important; font-size: 26px !important; text-align: left !important; white-space: normal !important; color: var(--text-primary) !important; }
+  .tempo-desc { position: relative !important; top: auto !important; right: auto !important; left: auto !important; font-size: 15px !important; text-align: left !important; white-space: normal !important; }
+}
