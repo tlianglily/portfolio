@@ -16,6 +16,7 @@ export default function Home() {
     <>
       <style>{`
         body { animation: pageFadeIn 400ms ease both; }
+        .hero { min-height: 100vh; min-height: 100svh; }
         .hero-intro      { animation: heroSlideUp 600ms cubic-bezier(.2,.6,.2,1) both; animation-delay:  40ms; }
         .hero-name       { animation: heroSlideUp 700ms cubic-bezier(.2,.6,.2,1) both; animation-delay:  80ms; }
         .hero-role       { animation: heroSlideUp 600ms cubic-bezier(.2,.6,.2,1) both; animation-delay: 160ms; }
@@ -81,7 +82,7 @@ export default function Home() {
       `}</style>
 
       {/* ── HERO ─────────────────────────────── */}
-      <section className="hero" style={{ minHeight: "100svh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "120px 64px 40px", position: "relative" }}>
+      <section className="hero" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "120px 64px 40px", position: "relative" }}>
         <div style={{ textAlign: "center", maxWidth: 1040, width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
           <p className="hero-intro" style={{ fontFamily: "var(--body)", fontSize: 26, fontWeight: 400, color: "var(--text-secondary)", marginBottom: 8, letterSpacing: "0.01em" }}>
             Hi, I&apos;m
