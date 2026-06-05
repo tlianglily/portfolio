@@ -81,17 +81,17 @@ export default function Resume() {
             <p style={{ fontFamily: "var(--body)", fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.75, marginBottom: 2 }}>AI-powered pregnancy support service designed to build trust with underserved patients before a first prenatal visit.</p>
             <ul className="entry-bullets">
               <li>Shaped CIRCA&apos;s AI persona and hybrid tone model, shifting between calm-factual and warm-validating responses based on question type</li>
-              <li>Prototyped a pre-enrollment chatbot preview to reduce the trust barrier identified as the primary driver of low adoption</li>
+              <li>Prototyped a pre-enrollment chatbot preview, directly addressing the trust barrier driving low adoption among the patients CIRCA was built to serve</li>
               <li>Redesigned onboarding flow and copy, including a safety escalation flow that detects high-risk language and routes patients to a human care specialist</li>
-              <li>Led Reddit forum analysis of early pregnancy communities to ground CIRCA&apos;s tone strategy in patient language rather than clinical terminology</li>
+              <li>Led Reddit forum analysis of early pregnancy communities, surfacing the emotional vocabulary and language patterns that shaped CIRCA&apos;s tone strategy</li>
             </ul>
           </EntryRow>
           <EntryRow date="Fall 2023" place="" title="Tempo ↗" titleHref="/projects/tempo" sub="Sponsored by NCR Voyix" tags={["UI/UX", "Hardware", "POS"]}>
             <p style={{ fontFamily: "var(--body)", fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.75, marginBottom: 2 }}>Three-part AI-powered service orchestration suite designed to reduce operational friction in fine dining.</p>
             <ul className="entry-bullets">
               <li>Identified inter-staff communication breakdown as a root cause of service failures and originated TempoChime, a wearable coordination device for dining room staff</li>
-              <li>Specified TempoChime&apos;s AI orchestration logic, assigning tasks by staff role based on a manager-configured service sequence</li>
-              <li>Developed information architecture and UX for TempoChime, and created CAD models and renderings for the wristband hardware</li>
+              <li>Specified TempoChime&apos;s AI orchestration logic, enabling task assignment by staff role without verbal coordination between servers, runners, and bussers</li>
+              <li>Developed information architecture and UX for TempoChime and created CAD models and renderings for the wristband hardware, carrying the concept from coordination logic to physical form</li>
             </ul>
           </EntryRow>
         </Section>
