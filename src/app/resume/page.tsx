@@ -66,8 +66,28 @@ export default function Resume() {
           </EntryRow>
         </Section>
 
+        {/* Experience */}
+        <Section label="Experience" num="02">
+          <EntryRow date="Summer 2025" place="Remote" title="TopProduct" sub="Co-Founder" fade>
+            <ul className="entry-bullets">
+              <li>Built and beta-tested a web-based PM interview prep MVP featuring AI mentor feedback, role-specific practice modules, timed exercises, difficulty ratings, and community answer comparison</li>
+              <li>Synthesized beta feedback and usage data to evaluate product-market fit, then led the decision to sunset the platform based on retention signals</li>
+            </ul>
+          </EntryRow>
+          <EntryRow date="2023 — Present" place="" title="Jaguar Signage" sub="Product & Sales Representative">
+            <ul className="entry-bullets">
+              <li>Represented Jaguar Signage at ISA International Sign Expo in Las Vegas and Orlando, leading product demos, sales conversations, and distributor outreach for B2B signage clients</li>
+            </ul>
+          </EntryRow>
+          <EntryRow date="Sep 2021 — Aug 2022" place="Atlanta, GA" title="Georgia Tech Police Department" sub="Social Media Assistant">
+            <ul className="entry-bullets">
+              <li>Produced graphics, illustrations, and motion content for Instagram and Facebook, building a consistent visual language across social channels</li>
+            </ul>
+          </EntryRow>
+        </Section>
+
         {/* Projects */}
-        <Section label="Selected Projects" num="02">
+        <Section label="Selected Projects" num="03">
           <EntryRow date="Fall 2025 — Spring 2026" place="" title="Little Autonomy ↗" titleHref="/projects/little-autonomy" sub="Mobile App" tags={["UX Research", "Interaction", "Mobile"]} fade>
             <p style={{ fontFamily: "var(--body)", fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.75, marginBottom: 2 }}>Montessori-inspired app helping parents build children&apos;s independence at home through guided practice and environment setup.</p>
             <ul className="entry-bullets">
@@ -91,26 +111,6 @@ export default function Resume() {
               <li>Identified inter-staff communication breakdown as a root cause of service failures and originated TempoChime, a wearable coordination device for dining room staff</li>
               <li>Specified TempoChime&apos;s AI orchestration logic, enabling task assignment by staff role without verbal coordination between servers, runners, and bussers</li>
               <li>Developed information architecture and UX for TempoChime and created CAD models and renderings for the wristband hardware, carrying the concept from coordination logic to physical form</li>
-            </ul>
-          </EntryRow>
-        </Section>
-
-        {/* Experience */}
-        <Section label="Experience" num="03">
-          <EntryRow date="Summer 2025" place="Remote" title="TopProduct" sub="Co-Founder" fade>
-            <ul className="entry-bullets">
-              <li>Built and beta-tested a web-based PM interview prep MVP featuring AI mentor feedback, role-specific practice modules, timed exercises, difficulty ratings, and community answer comparison</li>
-              <li>Synthesized beta feedback and usage data to evaluate product-market fit, then led the decision to sunset the platform based on retention signals</li>
-            </ul>
-          </EntryRow>
-          <EntryRow date="2023 — Present" place="" title="Jaguar Signage" sub="Product & Sales Representative">
-            <ul className="entry-bullets">
-              <li>Represented Jaguar Signage at ISA International Sign Expo in Las Vegas and Orlando, leading product demos, sales conversations, and distributor outreach for B2B signage clients</li>
-            </ul>
-          </EntryRow>
-          <EntryRow date="Sep 2021 — Aug 2022" place="Atlanta, GA" title="Georgia Tech Police Department" sub="Social Media Assistant">
-            <ul className="entry-bullets">
-              <li>Produced graphics, illustrations, and motion content for Instagram and Facebook, building a consistent visual language across social channels</li>
             </ul>
           </EntryRow>
         </Section>
