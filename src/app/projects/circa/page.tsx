@@ -53,25 +53,21 @@ export default function CircaPage() {
       <style>{`
         html, body { background: var(--circa-bg); }
 
-        /* Insight — bold italic callout with accent border */
+        /* Insight sub-heading */
         .cp-insight {
           font-family: var(--display);
-          font-style: italic;
-          font-weight: 400;
+          font-style: normal;
+          font-weight: 600;
           font-size: 22px;
-          line-height: 1.1;
-          letter-spacing: -0.015em;
+          line-height: 1.2;
+          letter-spacing: -0.02em;
           color: var(--text-primary);
-          border-left: 3px solid var(--circa-primary);
-          padding: 12px 16px 12px 15px;
-          margin: 28px 0 10px;
-          background: rgba(250, 151, 163, 0.03);
-          border-radius: 0 8px 8px 0;
+          margin: 32px 0 10px;
           font-optical-sizing: none;
           font-variation-settings: "opsz" 144, "WONK" 1;
         }
         .cp-insight:first-child { margin-top: 0; }
-        @media (max-width: 768px) { .cp-insight { font-size: 18px; } }
+        @media (max-width: 768px) { .cp-insight { font-size: 19px; } }
 
         /* Section divider */
         .cp-rule { height: 1px; background: var(--hairline); margin: 36px 0; }
@@ -839,7 +835,7 @@ export default function CircaPage() {
                   </div>
                 </div>
                 <p>CIRCA offers 24/7 access to clinically approved answers &mdash; a real gap-filler for women navigating early pregnancy without a doctor to call.</p>
-                <p>But the experience had significant friction. Due to NLP limitations, interactions felt robotic: responses were repetitive, inputs were rigid (e.g., &ldquo;Y&rdquo; or &ldquo;N&rdquo;), and there was no natural conversation flow. More critically, CIRCA lacked emotional support &mdash; leaving users feeling unseen during vulnerable moments. Occasional account deactivations added to the frustration.</p>
+                <p>But the experience had significant friction. Due to NLP limitations, interactions felt robotic: responses were repetitive, inputs were rigid (e.g., &ldquo;Y&rdquo; or &ldquo;N&rdquo;), and there was no natural conversation flow. More critically, CIRCA lacked emotional support, leaving users feeling unseen during vulnerable moments. Occasional account deactivations added to the frustration.</p>
                 <div className="cp-phone-row">
                   <p className="cp-eyebrow cp-eyebrow--centered cp-eyebrow--fullwidth">Actual CIRCA User Screenshots</p>
                   {[
@@ -895,7 +891,7 @@ export default function CircaPage() {
             title: "My Contribution",
             body: (
               <>
-                <p>I led the AI persona and tone strategy — defining the hybrid model that shifts CIRCA&rsquo;s responses between calm-factual and warm-validating modes depending on what a patient is asking. I proposed and designed the pre-enrollment embedded chatbot preview, redesigned the onboarding flow and copy, and designed the safety escalation flow. On research, I led the Reddit forum analysis and co-drafted the user journey map alongside the team. The deployment roadmap, website, poster, and service flow diagrams were collaborative or led by teammates.</p>
+                <p>I led the AI persona and tone strategy, defining the hybrid model that shifts CIRCA&rsquo;s responses between calm-factual and warm-validating modes depending on what a patient is asking. I proposed and designed the pre-enrollment embedded chatbot preview, redesigned the onboarding flow and copy, and designed the safety escalation flow. On research, I led the Reddit forum analysis and co-drafted the user journey map alongside the team. The deployment roadmap, website, poster, and service flow diagrams were collaborative or led by teammates.</p>
               </>
             ),
           },
@@ -907,15 +903,15 @@ export default function CircaPage() {
             body: (
               <>
                 <Insight>Behind every symptom question is an emotion that also needs an answer</Insight>
-                <p>When women reach out with a question, they&rsquo;re rarely just after medical facts. They want reassurance and validation too. The best answers carry both &mdash; the information and the emotional support.</p>
+                <p>When women reach out with a question, they&rsquo;re rarely just after medical facts. They want reassurance and validation too. The best answers carry both: the information and the emotional support.</p>
 
                 <h4>We gave CIRCA a voice that adapts to what&rsquo;s being asked</h4>
-                <Bullet label="AI persona">Respectful, supportive, calming, compassionate, and clinically grounded &mdash; each attribute maps to a trust barrier from research, balancing non-judgmental warmth with Penn Medicine&apos;s clinical authority.</Bullet>
+                <Bullet label="AI persona">Respectful, supportive, calming, compassionate, and clinically grounded; each attribute maps to a trust barrier from research, balancing non-judgmental warmth with Penn Medicine&apos;s clinical authority.</Bullet>
                 <img loading="lazy" src="/images/circa/circa-ai-persona.svg" alt="AI persona" className="cp-img" data-lightbox />
-                <Bullet label="Hybrid tone model">CIRCA shifts its tone to match the question &mdash; calm and factual for medical ones, warm and validating for emotional ones.</Bullet>
+                <Bullet label="Hybrid tone model">CIRCA shifts its tone to match the question: calm and factual for medical ones, warm and validating for emotional ones.</Bullet>
                 <img loading="lazy" src="/images/circa/circa-hybrid-tone.svg" alt="Hybrid tone model" className="cp-img" data-lightbox />
 
-                <Bullet label="Improved NLP with ChatGPT API">CIRCA&rsquo;s answers come from Memora Health&rsquo;s databank of clinically approved responses. We added a ChatGPT layer that adjusts the language &mdash; keeping the medical accuracy intact while making each answer feel helpful and supportive rather than clinical.</Bullet>
+                <Bullet label="Improved NLP with ChatGPT API">CIRCA&rsquo;s answers come from Memora Health&rsquo;s databank of clinically approved responses. We added a ChatGPT layer that adjusts the language, keeping the medical accuracy intact while making each answer feel helpful and supportive rather than clinical.</Bullet>
                 <div className="cp-pipeline-stack">
                   <div className="cp-pipeline-item">
                     <span className="cp-tag cp-tag--before">Before</span>
@@ -938,7 +934,7 @@ export default function CircaPage() {
             body: (
               <>
                 <Insight>A one-size-fits-all flow couldn&rsquo;t adapt to wanted, unsure, or loss</Insight>
-                <p>No two pregnancies are the same &mdash; even for the same person the second time around. A single linear flow couldn&rsquo;t meet users whose experiences ranged from excitement to uncertainty to loss. Each pregnancy journey can look drastically different.</p>
+                <p>No two pregnancies are the same, even for the same person the second time around. A single linear flow couldn&rsquo;t meet users whose experiences ranged from excitement to uncertainty to loss. Each pregnancy journey can look drastically different.</p>
                 <img loading="lazy" src="/images/circa/circa-journey-map.svg" alt="Journey map — three pregnancy experiences" className="cp-img" data-lightbox />
 
                 <h4>We built paths that match each person&rsquo;s situation</h4>
@@ -987,7 +983,7 @@ export default function CircaPage() {
             body: (
               <>
                 <Insight>Trust starts with being found, and CIRCA was invisible</Insight>
-                <p>CIRCA&rsquo;s outreach poster didn&rsquo;t convey what the service was for, and online it had almost no presence. Users couldn&rsquo;t trust &mdash; or even find &mdash; a service they didn&rsquo;t know existed.</p>
+                <p>CIRCA&rsquo;s outreach poster didn&rsquo;t convey what the service was for, and online it had almost no presence. Users couldn&rsquo;t trust, or even find, a service they didn&rsquo;t know existed.</p>
 
                 <h4>We made CIRCA easy to find, understand, and try</h4>
 
@@ -997,7 +993,7 @@ export default function CircaPage() {
                   <div className="cp-poster-col">
                     <img loading="lazy" src="/images/circa/circa-poster-before.webp" alt="Original CIRCA poster" data-lightbox />
                     <span className="cp-tag cp-tag--before">Before</span>
-                    <p className="cp-poster-desc">No service name, no Penn Medicine branding, no clarity on what happens after you enroll. Generic imagery makes the purpose ambiguous, and the cold clinical palette signals authority without warmth &mdash; the wrong emotional register for an anxious first-time patient.</p>
+                    <p className="cp-poster-desc">No service name, no Penn Medicine branding, no clarity on what happens after you enroll. Generic imagery makes the purpose ambiguous, and the cold clinical palette signals authority without warmth, the wrong emotional register for an anxious first-time patient.</p>
                   </div>
                   <div className="cp-poster-col">
                     <img loading="lazy" src="/images/circa/circa-flyer.webp" alt="Redesigned CIRCA poster" data-lightbox />
@@ -1009,14 +1005,14 @@ export default function CircaPage() {
                 <Rule />
 
                 {/* Digital touchpoints — 2×2 grid, each with label + description below */}
-                <p>We designed a layered discovery path &mdash; find CIRCA, understand it, try it, trust it.</p>
+                <Insight>We designed a layered discovery path: find CIRCA, understand it, try it, trust it.</Insight>
                 <div className="cp-trust-cards">
                   <div className="cp-trust-card">
                     <Bullet label="Website redesign">Warmer, more welcoming PEACE site that leads with patient needs, not clinic credentials.</Bullet>
                     <img loading="lazy" src="/images/circa/circa-website.webp" alt="Redesigned PEACE website" data-lightbox />
                   </div>
                   <div className="cp-trust-card">
-                    <Bullet label="CIRCA landing page">A dedicated page to learn what CIRCA is, what it does, and who it&rsquo;s backed by &mdash; before enrolling.</Bullet>
+                    <Bullet label="CIRCA landing page">A dedicated page to learn what CIRCA is, what it does, and who it&rsquo;s backed by, before enrolling.</Bullet>
                     <img loading="lazy" src="/images/circa/circa-landing-page.webp" alt="CIRCA landing page" data-lightbox />
                   </div>
                   <div className="cp-trust-card">
@@ -1038,7 +1034,7 @@ export default function CircaPage() {
             title: "Roadmap & Prioritization",
             body: (
               <>
-                <p>We prioritized changes by feasibility and trust impact across three phases &mdash; immediate outreach fixes, near-term UX improvements, and long-term research investments.</p>
+                <p>We prioritized changes by feasibility and trust impact across three phases: immediate outreach fixes, near-term UX improvements, and long-term research investments.</p>
                 <img loading="lazy" src="/images/circa/circa-roadmap.svg" alt="Roadmap & prioritization matrix" className="cp-img" data-lightbox />
               </>
             ),

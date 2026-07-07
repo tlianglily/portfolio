@@ -130,7 +130,7 @@ export function ProjectLayout({
         }
         .intro-left { display: flex; flex-direction: column; gap: 20px; }
         .proj-tagline {
-          font-family: "DM Sans", sans-serif; font-size: 19px; font-weight: 400; font-style: italic;
+          font-family: "DM Sans", sans-serif; font-size: 19px; font-weight: 500; font-style: normal;
           line-height: 1.35; letter-spacing: -0.02em; color: var(--text-primary);
         }
         .proj-sponsored {

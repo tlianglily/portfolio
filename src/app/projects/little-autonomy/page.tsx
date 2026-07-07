@@ -61,23 +61,19 @@ export default function LittleAutonomyPage() {
       <style>{`
         html, body { background: var(--la-bg); }
 
-        /* ── Pull-quote insight headline ─────────────────────────────── */
+        /* ── Insight sub-heading ──────────────────────────────────────── */
         .la-insight {
           font-family: var(--display);
-          font-style: italic; font-weight: 400;
+          font-style: normal; font-weight: 600;
           font-size: 22px;
-          line-height: 1.1; letter-spacing: -0.015em;
+          line-height: 1.2; letter-spacing: -0.02em;
           color: var(--text-primary);
-          border-left: 3px solid var(--la-primary);
-          padding: 12px 16px 12px 15px;
-          margin: 28px 0 10px;
-          background: rgba(122, 54, 253, 0.03);
-          border-radius: 0 8px 8px 0;
+          margin: 32px 0 10px;
           font-optical-sizing: none;
           font-variation-settings: "opsz" 144, "WONK" 1;
         }
         .la-insight:first-child { margin-top: 0; }
-        @media (max-width: 768px) { .la-insight { font-size: 18px; } }
+        @media (max-width: 768px) { .la-insight { font-size: 19px; } }
 
         /* ── Video title ─────────────────────────────────────────────── */
         .la-video-title {
@@ -577,8 +573,8 @@ export default function LittleAutonomyPage() {
             title: "Problem",
             body: (
               <>
-                <Insight>Parents don&rsquo;t need more advice &mdash; they need a credible system</Insight>
-                <p>Parents value independence but are overwhelmed by advice and short on clarity. The problem isn&rsquo;t a lack of information &mdash; it&rsquo;s the absence of a clear system that tells them what to do.</p>
+                <Insight>Parents don&rsquo;t need more advice: they need a credible system</Insight>
+                <p>Parents value independence but are overwhelmed by advice and short on clarity. The problem isn&rsquo;t a lack of information. It&rsquo;s the absence of a clear system that tells them what to do.</p>
                 <div className="la-stat-pair">
                   <div className="la-stat-card">
                     <div className="la-stat-card-img-well">
@@ -612,14 +608,14 @@ export default function LittleAutonomyPage() {
 
                 <Rule />
 
-                <Insight>Montessori builds independence through a prepared environment &mdash; the hardest part to recreate at home</Insight>
-                <p>Montessori works through a prepared environment of instruction, materials, and furniture &mdash; but at home, materials are costly and clear guidance is scarce.</p>
+                <Insight>Montessori builds independence through a prepared environment, the hardest part to recreate at home</Insight>
+                <p>Montessori works through a prepared environment of instruction, materials, and furniture. At home, materials are costly and clear guidance is scarce.</p>
                 <img loading="lazy" src="/images/la/la-montessori-equation.svg" alt="Montessori equation diagram" className="la-full-img" data-lightbox />
 
                 <Rule />
 
                 <Insight>Most solutions give advice; almost none give a system</Insight>
-                <p>Existing options are either expensive and structured or cheap and unstructured. Almost nothing offers actionable guidance at an accessible price &mdash; the open space Little Autonomy fills.</p>
+                <p>Existing options are either expensive and structured or cheap and unstructured. Almost nothing offers actionable guidance at an accessible price. That&rsquo;s the gap Little Autonomy fills.</p>
                 <img loading="lazy" src="/images/la/la-positioning-map.svg" alt="Positioning map: structured vs unstructured guidance by price" className="la-full-img la-positioning-map" style={{ width: "84%", margin: "18px auto" }} data-lightbox />
               </>
             ),
@@ -664,8 +660,8 @@ export default function LittleAutonomyPage() {
               <>
                 <div className="la-approach-row">
                   <div className="la-approach-text">
-                    <Insight>We met parents where they were &mdash; in their homes, in their routines, and in their own words</Insight>
-                    <p>We grounded the project in mixed-method research &mdash; interviews, surveys, field visits, and forum analysis &mdash; to anchor it in real daily friction, not assumptions.</p>
+                    <Insight>We met parents where they were: in their homes, in their routines, and in their own words</Insight>
+                    <p>We grounded the project in mixed-method research (interviews, surveys, field visits, and forum analysis) to anchor it in real daily friction, not assumptions.</p>
                     <div className="la-research-grid">
                       {[
                         { num: "60+",  label: "Parents interviewed" },
@@ -694,7 +690,7 @@ export default function LittleAutonomyPage() {
             title: "My Contribution",
             body: (
               <>
-                <p>I led the UX design across the full product — defining the app flow, the personalized recommendation system, and the guided step-by-step practice experience. I also built the conjoint analysis that quantified user feature preferences, which directly drove the decision to cut the AI chatbot in favor of live Montessori educator access. On the business side, I contributed to market sizing and the subscription model. Research was a full team effort across interviews, field visits, surveys, and forum analysis.</p>
+                <p>I led the UX design across the full product, defining the app flow, the personalized recommendation system, and the guided step-by-step practice experience. I also built the conjoint analysis that quantified user feature preferences, which directly drove the decision to cut the AI chatbot in favor of live Montessori educator access. On the business side, I contributed to market sizing and the subscription model. Research was a full team effort across interviews, field visits, surveys, and forum analysis.</p>
               </>
             ),
           },
@@ -714,7 +710,7 @@ export default function LittleAutonomyPage() {
                   </div>
                   <div className="la-gp-feature-text">
                     <h4>Personalized recommendation</h4>
-                    <p>Suggests what to practice based on the child&rsquo;s current capability, not their age &mdash; answering &ldquo;what should we practice today?&rdquo;</p>
+                    <p>Suggests what to practice based on the child&rsquo;s current capability, not their age, answering &ldquo;what should we practice today?&rdquo;</p>
                   </div>
                 </div>
 
@@ -754,7 +750,7 @@ export default function LittleAutonomyPage() {
                     <img loading="lazy" src="/images/la/la-roadmap-v2.webp" alt="V2 phase-based roadmap" />
                     <div className="la-compare-caption">
                       <span className="la-version-tag la-version-tag--before">Iteration 2</span>
-                      <p>Switched to phase bubbles &mdash; better framing, but still too abstract for parents to act on.</p>
+                      <p>Switched to phase bubbles, better framing but still too abstract for parents to act on.</p>
                     </div>
                   </div>
                   <div className="la-compare-col">
@@ -776,7 +772,7 @@ export default function LittleAutonomyPage() {
             body: (
               <>
                 <Insight>The hardest part of Montessori at home is building the space</Insight>
-                <p>Since the prepared environment is what parents struggle with most, we made setup the core of the product &mdash; so the space does the teaching.</p>
+                <p>Since the prepared environment is what parents struggle with most, we made setup the core of the product, so the space does the teaching.</p>
 
                 <div className="la-gp-feature">
                   <div className="la-gp-feature-media">
@@ -784,7 +780,7 @@ export default function LittleAutonomyPage() {
                   </div>
                   <div className="la-gp-feature-text">
                     <h4>Scan for advice</h4>
-                    <p>Point the camera at any room and the app identifies key objects, detects mismatches with Montessori principles, and surfaces specific, actionable suggestions &mdash; no manual checklist needed.</p>
+                    <p>Point the camera at any room and the app identifies key objects, detects mismatches with Montessori principles, and surfaces specific, actionable suggestions. No manual checklist needed.</p>
                   </div>
                 </div>
 
@@ -794,27 +790,27 @@ export default function LittleAutonomyPage() {
                   </div>
                   <div className="la-gp-feature-text">
                     <h4>Show, don&rsquo;t tell</h4>
-                    <p>Step-by-step illustrations highlight exactly what to move, replace, or add &mdash; making every setup action immediately clear without wading through text.</p>
+                    <p>Step-by-step illustrations highlight exactly what to move, replace, or add, making every setup action immediately clear without wading through text.</p>
                   </div>
                 </div>
 
                 <Rule />
 
-                <Insight>Parents asked for less text &mdash; so we replaced the checklist with illustrations and a scan</Insight>
+                <Insight>Parents asked for less text, so we replaced the checklist with illustrations and a scan</Insight>
                 <p>We swapped our text checklist for illustrated instructions and a scan feature that reads a room and flags what to fix.</p>
                 <div className="la-compare la-compare--two-narrow">
                   <div className="la-compare-col">
-                    <img loading="lazy" src="/images/la/la-checklist-v1.webp" alt="Iteration 1 — text checklist" />
+                    <img loading="lazy" src="/images/la/la-checklist-v1.webp" alt="Iteration 1, text checklist" />
                     <div className="la-compare-caption">
                       <span className="la-version-tag la-version-tag--before">Iteration 1</span>
                       <p>A text-heavy checklist. Parents skimmed it, missed steps, and felt overwhelmed.</p>
                     </div>
                   </div>
                   <div className="la-compare-col">
-                    <img loading="lazy" src="/images/la/la-checklist-v2.webp" alt="Final — illustrated checklist" />
+                    <img loading="lazy" src="/images/la/la-checklist-v2.webp" alt="Final illustrated checklist" />
                     <div className="la-compare-caption">
                       <span className="la-version-tag la-version-tag--after">Final</span>
-                      <p>Added illustrations and task cards &mdash; clearer, but still missing a space assessment.</p>
+                      <p>Added illustrations and task cards, clearer but still missing a space assessment.</p>
                     </div>
                   </div>
                 </div>
@@ -830,8 +826,8 @@ export default function LittleAutonomyPage() {
               <>
                 <div className="la-phone-row">
                   <div className="la-phone-row-text">
-                    <Insight>Parents trust people, not chatbots &mdash; so we cut the AI</Insight>
-                    <p>We connected parents directly to Montessori educators and cut the AI chatbot &mdash; research showed parents trust experts, and it carried a <span className="la-badge-neg">−21.2% preference impact</span>.</p>
+                    <Insight>Parents trust people, not chatbots. So we cut the AI.</Insight>
+                    <p>We connected parents directly to Montessori educators and cut the AI chatbot. Research showed parents trust experts, and it carried a <span className="la-badge-neg">−21.2% preference impact</span>.</p>
                   </div>
                   <div className="la-phone-row-img la-phone-row-img--two">
                     <img loading="lazy" src="/images/la/la-screen-expert-chat.webp" alt="Expert chat with real Montessori educators" className="la-phone-img" />
@@ -848,8 +844,8 @@ export default function LittleAutonomyPage() {
             title: "Validation",
             body: (
               <>
-                <Insight>Parents didn&rsquo;t just like it &mdash; they saw their mornings getting easier</Insight>
-                <p>Parents told us children want to practice independence, not be told what to do &mdash; and saw the real payoff as time back in their own day.</p>
+                <Insight>Parents didn&rsquo;t just like it: they saw their mornings getting easier</Insight>
+                <p>Parents told us children want to practice independence, not be told what to do, and saw the real payoff as time back in their own day.</p>
                 <div className="la-validation-grid">
                   <img loading="lazy" src="/images/la/la-validation-1.svg" alt="Parent validation card 1" className="la-validation-img" data-lightbox />
                   <img loading="lazy" src="/images/la/la-validation-2.svg" alt="Parent validation card 2" className="la-validation-img" data-lightbox />
@@ -907,7 +903,7 @@ export default function LittleAutonomyPage() {
             title: "Reflection",
             body: (
               <>
-                <p>This project taught me that good design is as much about restraint as addition. The clearest proof was cutting the AI chatbot the research didn&rsquo;t support &mdash; designing for anxious parents meant building only the few things that genuinely reduced friction: knowing the next step, setting up the space, and reaching a real expert when it mattered.</p>
+                <p>This project taught me that good design is as much about restraint as addition. The clearest proof was cutting the AI chatbot the research didn&rsquo;t support. Designing for anxious parents meant building only the few things that genuinely reduced friction: knowing the next step, setting up the space, and reaching a real expert when it mattered.</p>
                 <p style={{ marginTop: "1.25em" }}>This was the first project where business constraints directly reshaped design decisions. Our conjoint analysis revealed a clear price sensitivity threshold &mdash; which meant cutting a feature we&rsquo;d planned as core to the experience, and revisiting multiple screens as the business model adjusted. It was uncomfortable to redesign work we&rsquo;d already refined, but it made the final product more honest about what it could actually sustain.</p>
                 <p style={{ marginTop: "1.25em" }}>The other thing that shaped this project most was our external Montessori education mentor. Her passion for the philosophy was contagious &mdash; without her, we would have designed around Montessori rather than from it. It reminded me that reaching out early to the right outside voice can change a project&rsquo;s entire trajectory.</p>
                 <p style={{ marginTop: "1.25em" }}>The biggest process lesson: expect to pivot, but don&rsquo;t treat earlier work as waste. Our early research resurfaced in meaningful ways throughout &mdash; the pivots built on what came before rather than discarding it.</p>

@@ -44,10 +44,9 @@ export default function Resume() {
             <a href="/uploads/Liang_Lily_Resume.pdf" className="pdf-btn" download>↓ Download PDF</a>
           </div>
           <div className="page-meta" style={{ textAlign: "right", fontFamily: "var(--body)", fontSize: 13, color: "var(--text-secondary)", lineHeight: 2, flexShrink: 0 }}>
-            <p>Philadelphia, PA</p>
+            <span style={{ fontFamily: "var(--body)", fontWeight: 700, fontSize: 13, color: "var(--text-primary)", display: "block" }}>Authorized to work in the U.S. without sponsorship</span>
             <p><a href="mailto:tlianglilydesign@gmail.com">tlianglilydesign@gmail.com</a></p>
             <p><a href="https://linkedin.com/in/tlianglily">LinkedIn</a></p>
-            <span style={{ fontFamily: "var(--emphasis)", fontStyle: "italic", fontWeight: 700, color: "var(--text-tertiary)", marginTop: 6, display: "block" }}>Seeking full-time roles · 2026</span>
           </div>
         </div>
 

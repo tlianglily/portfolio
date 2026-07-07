@@ -103,7 +103,7 @@ export default function Home() {
           {[
             { lbl: "Problem",  text: <>The most interesting problems are the ones people have accepted as normal. They stop being felt as friction at all.</> },
             { lbl: "Insight",  text: <>Real need lives one layer beneath what&apos;s visible. The stated problem is rarely the real one.</> },
-            { lbl: "Solution", text: <>Most solutions already exist — somewhere else. The skill is knowing what to borrow and how to combine.</> },
+            { lbl: "Solution", text: <>Most solutions already exist somewhere else. The skill is knowing what to borrow and how to combine.</> },
           ].map(({ lbl, text }) => (
             <div key={lbl}>
               <span style={{ fontFamily: "var(--body)", fontSize: 13, fontWeight: 500, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--accent-red)", display: "block", marginBottom: 18 }}>{lbl}</span>
@@ -198,7 +198,7 @@ export default function Home() {
             {[
               { lbl: "Problem",  text: "The most interesting problems are the ones people have accepted as normal. They stop being felt as friction at all." },
               { lbl: "Insight",  text: "Real need lives one layer beneath what's visible. The stated problem is rarely the real one." },
-              { lbl: "Solution", text: "Most solutions already exist — somewhere else. The skill is knowing what to borrow and how to combine." },
+              { lbl: "Solution", text: "Most solutions already exist somewhere else. The skill is knowing what to borrow and how to combine." },
             ].map(({ lbl, text }) => (
               <div key={lbl} style={{ paddingBottom: 28, borderBottom: "1px solid var(--hairline)", marginBottom: 28 }}>
                 <span style={{ fontFamily: "var(--body)", fontSize: 13, fontWeight: 500, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--accent-red)", display: "block", marginBottom: 10 }}>{lbl}</span>

@@ -3,7 +3,7 @@ import { ProjectLayout } from "@/components/ProjectLayout";
 export const metadata = {
   title: "Tempo - Lily Liang Portfolio",
   description:
-    "Three-part AI-powered service suite for fine dining restaurants — TempoScribe, TempoChime, and TempoTap. Designed for NCR Voyix, Fall 2023.",
+    "Three-part AI-powered service suite for fine dining restaurants: TempoScribe, TempoChime, and TempoTap. Designed for NCR Voyix, Fall 2023.",
 };
 
 /* ─── Helpers ─────────────────────────────────────────────────────────────── */
@@ -153,25 +153,21 @@ export default function TempoPage() {
       <style>{`
         html, body { background: var(--tempo-bg); }
 
-        /* ── Insight ──────────────────────────────────────────── */
+        /* ── Insight sub-heading ──────────────────────────────────── */
         .tp-insight {
           font-family: var(--display);
-          font-style: italic;
-          font-weight: 400;
+          font-style: normal;
+          font-weight: 600;
           font-size: 22px;
-          line-height: 1.1;
-          letter-spacing: -0.015em;
+          line-height: 1.2;
+          letter-spacing: -0.02em;
           color: var(--text-primary);
-          border-left: 3px solid var(--tempo-primary);
-          padding: 12px 16px 12px 15px;
-          margin: 28px 0 10px;
-          background: rgba(95, 36, 159, 0.03);
-          border-radius: 0 8px 8px 0;
+          margin: 32px 0 10px;
           font-optical-sizing: none;
           font-variation-settings: "opsz" 144, "WONK" 1;
         }
         .tp-insight:first-child { margin-top: 0; }
-        @media (max-width: 768px) { .tp-insight { font-size: 18px; } }
+        @media (max-width: 768px) { .tp-insight { font-size: 19px; } }
 
         /* ── Rule ─────────────────────────────────────────────── */
         .tp-rule { height: 1px; background: var(--hairline); margin: 36px 0; }
@@ -691,7 +687,7 @@ export default function TempoPage() {
           <p>
             Tempo is a three-part AI-powered suite designed to reduce operational friction in high-end
             restaurants without disrupting the premium service experience. It covers ordering
-            (TempoScribe), task coordination (TempoChime), and payment (TempoTap) — giving staff the
+            (TempoScribe), task coordination (TempoChime), and payment (TempoTap), giving staff the
             tools to keep service flowing while guests experience something seamless.
           </p>
         }
@@ -791,7 +787,7 @@ export default function TempoPage() {
                 <Rule />
 
                 <Insight>High-end service is a sequence. One person can break the whole thing.</Insight>
-                <p>Fine dining doesn&rsquo;t just require good food — it requires a choreographed sequence of service steps, coordinated across servers, sommeliers, food runners, and bussers. When any one person falls behind, the whole table feels it. And because guests are paying a premium, they notice everything that goes wrong.</p>
+                <p>Fine dining doesn&rsquo;t just require good food. It requires a choreographed sequence of service steps, coordinated across servers, sommeliers, food runners, and bussers. When any one person falls behind, the whole table feels it. And because guests are paying a premium, they notice everything that goes wrong.</p>
                 <figure className="tp-fig tp-fig--lg">
                   <img
                     src="/images/tempo/tempo-guest-journey-map.svg"
@@ -812,7 +808,7 @@ export default function TempoPage() {
             body: (
               <>
                 <Insight>Tempo keeps the dining room in sync</Insight>
-                <p>Tempo is a three-part service-orchestration suite — an AI ordering system (TempoScribe), a task coordination system (TempoChime), and a smart payment system (TempoTap) — designed to reduce operational friction without disrupting the premium service experience guests expect.</p>
+                <p>Tempo is a three-part service-orchestration suite comprising an AI ordering system (TempoScribe), a task coordination system (TempoChime), and a smart payment system (TempoTap), designed to reduce operational friction without disrupting the premium service experience guests expect.</p>
                 <div className="tp-img-crop tp-img-crop--full">
                   <img loading="lazy" src="/images/tempo/tempo-system-overview.webp" alt="Tempo full system overview" />
                 </div>
@@ -826,7 +822,7 @@ export default function TempoPage() {
             title: "Approach",
             body: (
               <>
-                <Insight>The research was extensive — every role, every perspective.</Insight>
+                <Insight>The research was extensive: every role, every perspective.</Insight>
                 <StatRow stats={[
                   { value: "5",   label: "server interviews" },
                   { value: "5",   label: "guest interviews" },
@@ -834,7 +830,7 @@ export default function TempoPage() {
                   { value: "75+", label: "survey responses" },
                   { value: "25+", label: "hours on the floor" },
                 ]} />
-                <p>We interviewed servers, managers, and fine dining guests, ran consumer surveys, and spent 25+ hours in restaurant visits and field observation. 45 insights came out of that research — across consumer experience, service operations, and technology — and shaped every design decision Tempo makes.</p>
+                <p>We interviewed servers, managers, and fine dining guests, ran consumer surveys, and spent 25+ hours in restaurant visits and field observation. 45 insights came out of that research (across consumer experience, service operations, and technology) and shaped every design decision Tempo makes.</p>
                 <div className="tp-img-crop tp-img-crop--interview">
                   <img loading="lazy" src="/images/tempo/tempo-interview-image.webp" alt="Tempo interview and restaurant field research collage" />
                 </div>
@@ -849,7 +845,7 @@ export default function TempoPage() {
             body: (
               <>
                 <Insight>One person can delay the whole sequence</Insight>
-                <p>Fine dining runs on a set sequence of operation — and any single handoff between staff members can stall the whole table. Less than 28% of diners are willing to wait more than 30 minutes, making coordination failures directly visible to guests.</p>
+                <p>Fine dining runs on a set sequence of operation, and any single handoff between staff members can stall the whole table. Less than 28% of diners are willing to wait more than 30 minutes, making coordination failures directly visible to guests.</p>
                 <div className="tp-insight-split">
                   <img loading="lazy" src="/images/tempo/tempo-sequence-diagram.svg" alt="Broken event sequence diagram: service flow and staff handoff points" className="tp-insight-split-img" />
                   <Quote attribution="— Sophia, Server">
@@ -859,8 +855,8 @@ export default function TempoPage() {
 
                 <Rule />
 
-                <Insight>Neglect isn&rsquo;t laziness — it&rsquo;s a coordination and staffing problem</Insight>
-                <p>Understaffing and the sheer complexity of service steps mean tables get missed — not because servers don&rsquo;t care, but because the system gives them no visibility into who needs attention when.</p>
+                <Insight>Neglect isn&rsquo;t laziness: it&rsquo;s a coordination and staffing problem</Insight>
+                <p>Understaffing and the sheer complexity of service steps mean tables get missed, not because servers don&rsquo;t care, but because the system gives them no visibility into who needs attention when.</p>
                 <Quote attribution="— Max, Server at STK">
                   &ldquo;I&rsquo;ve been here for 2 years ... I&rsquo;m at your table long before [the time limit for table greeting]&rdquo;
                 </Quote>
@@ -872,7 +868,7 @@ export default function TempoPage() {
                 <Rule />
 
                 <Insight>Guests pay for perfection and remember every flaw</Insight>
-                <p>Because the price is high, the threshold for satisfaction is also high — and asymmetric. Guests don&rsquo;t tally up everything that went right. They focus on what went wrong. More than 72% of diners find restaurants through online ratings, so service failures compound into business ones.</p>
+                <p>Because the price is high, the threshold for satisfaction is also high, and asymmetric. Guests don&rsquo;t tally up everything that went right. They focus on what went wrong. More than 72% of diners find restaurants through online ratings, so service failures compound into business ones.</p>
                 <div className="tp-stat-quote-grid">
                   <figure className="tp-fig tp-fig--stat">
                     <img
@@ -893,7 +889,7 @@ export default function TempoPage() {
           {
             id: "contribution",
             title: "My Contribution",
-            body: <p>I originated the TempoChime concept — identifying inter-staff communication as the root coordination failure in fine dining and proposing a wearable device as the solution. I defined the AI orchestration logic behind it, designed the full information architecture and UX, and created all CAD models and renderings for the wristband hardware. Research was a full team effort. TempoScribe and TempoTap were led by teammates.</p>,
+            body: <p>I originated the TempoChime concept, identifying inter-staff communication as the root coordination failure in fine dining and proposing a wearable device as the solution. I defined the AI orchestration logic behind it, designed the full information architecture and UX, and created all CAD models and renderings for the wristband hardware. Research was a full team effort. TempoScribe and TempoTap were led by teammates.</p>,
           },
 
           /* ── OBJECTIVE ────────────────────────────────────────────────────── */
@@ -903,7 +899,7 @@ export default function TempoPage() {
             body: (
               <>
                 <Insight>Designing for flow, not features</Insight>
-                <p>The design objective was to <strong>use AI to improve the flow and consistency of premium service — without adding cognitive load for staff. Any feature that made the server think harder was a feature that worked against the goal.</strong></p>
+                <p>The design objective was to <strong>use AI to improve the flow and consistency of premium service, without adding cognitive load for staff. Any feature that made the server think harder was a feature that worked against the goal.</strong></p>
                 <figure className="tp-fig tp-fig--lg">
                   <img loading="lazy" src="/images/tempo/tempo-design-criteria.svg" alt="Design criteria grid: must have / should have / nice to have" className="tp-fig-img" data-lightbox />
                 </figure>
@@ -932,19 +928,19 @@ export default function TempoPage() {
                     alt="Current POS system: cluttered interface"
                     className="tp-fig-img"
                   />
-                  <figcaption className="tp-fig-caption">The current POS system demanded full attention — at exactly the wrong moment</figcaption>
+                  <figcaption className="tp-fig-caption">The current POS system demanded full attention, at exactly the wrong moment</figcaption>
                 </figure>
 
                 <Rule />
 
-                <Insight>We gave servers three ways to take orders — and made editing effortless</Insight>
+                <Insight>We gave servers three ways to take orders and made editing effortless</Insight>
                 <TrustCards>
                   <TrustCard
                     label="Voice to text"
                     slot={
                       <video autoPlay loop muted playsInline><source src="/images/tempo/tempo-scribe-voice-to-text.mp4" type="video/mp4" /></video>
                     }
-                  >Server taps a seat to begin — built-in voice recognition then tracks who&rsquo;s speaking, so no extra taps are needed for each guest.</TrustCard>
+                  >Server taps a seat to begin; built-in voice recognition then tracks who&rsquo;s speaking, so no extra taps are needed for each guest.</TrustCard>
                   <TrustCard
                     label="Handwriting to text"
                     slot={
@@ -957,7 +953,7 @@ export default function TempoPage() {
                   <TrustCard
                     label="Intuitive gesture edits"
                     slot={<GestureEditsStack />}
-                  >Tap to modify, drag to reassign, cross to delete — edits that match how servers already think about an order.</TrustCard>
+                  >Tap to modify, drag to reassign, cross to delete: edits that match how servers already think about an order.</TrustCard>
                 </TrustCards>
               </>
             ),
@@ -976,7 +972,7 @@ export default function TempoPage() {
                     className="tp-fig-img"
                   />
                 </figure>
-                <Insight>Staff had no shared view of the floor — so coordination happened verbally, inconsistently</Insight>
+                <Insight>Staff had no shared view of the floor, so coordination happened verbally and inconsistently</Insight>
                 <p>Without a live view of table status, task assignments were communicated verbally or not at all. Servers couldn&rsquo;t see where other staff were, what tasks were in progress, or when a table was falling behind. Coordination depended entirely on memory and experience.</p>
                 <figure className="tp-fig tp-fig--flow">
                   <img
@@ -999,7 +995,7 @@ export default function TempoPage() {
                         alt="TempoChime customizable timeline screen"
                       />
                     }
-                  >Managers set and edit the flow of service for each restaurant — every course, every task, in sequence.</TrustCard>
+                  >Managers set and edit the flow of service for each restaurant: every course, every task, in sequence.</TrustCard>
                   <TrustCard
                     label="AI task distribution"
                     slot={
@@ -1020,7 +1016,7 @@ export default function TempoPage() {
                     slot={
                       <video autoPlay loop muted playsInline><source src="/images/tempo/tempo-chime-interstaff-communication.mp4" type="video/mp4" /></video>
                     }
-                  >Servers complete tasks by swiping the notification bar — no verbal check-ins needed.</TrustCard>
+                  >Servers complete tasks by swiping the notification bar. No verbal check-ins needed.</TrustCard>
                   <TrustCard
                     label="Pause and redistribute"
                     slot={
@@ -1058,7 +1054,7 @@ export default function TempoPage() {
                   />
                 </figure>
                 <Insight>Splitting the check was the most friction-filled moment of the whole meal</Insight>
-                <p>Check splitting at fine dining involves multiple guests, complex orders, and social dynamics around who pays for what. The existing process required servers to manually parse every item — a slow, error-prone close to an otherwise premium experience.</p>
+                <p>Check splitting at fine dining involves multiple guests, complex orders, and social dynamics around who pays for what. The existing process required servers to manually parse every item, a slow, error-prone close to an otherwise premium experience.</p>
                 <figure className="tp-fig tp-fig--full">
                   <img
                     src="/images/tempo/tempo-check-splitting-pain.webp"
@@ -1069,20 +1065,20 @@ export default function TempoPage() {
 
                 <Rule />
 
-                <Insight>AI handles the split — guests just tell it what they want</Insight>
+                <Insight>AI handles the split: guests just tell it what they want</Insight>
                 <TrustCards>
                   <TrustCard
                     label="AI split assist"
                     slot={
                       <video autoPlay loop muted playsInline style={{ mixBlendMode: "multiply" }}><source src="/images/tempo/tempo-tap-ai-check-splitting.mp4" type="video/mp4" /></video>
                     }
-                  >Guests describe how they&rsquo;d like to split in natural language — the system handles the rest.</TrustCard>
+                  >Guests describe how they&rsquo;d like to split in natural language, and the system handles the rest.</TrustCard>
                   <TrustCard
                     label="Flexible split options"
                     slot={
                       <video autoPlay loop muted playsInline><source src="/images/tempo/tempo-tap-flexible-check-splitting.mp4" type="video/mp4" /></video>
                     }
-                  >By guest, equally, or by host — each with a clear summary before confirmation.</TrustCard>
+                  >By guest, equally, or by host, each with a clear summary before confirmation.</TrustCard>
                   <TrustCard
                     label="Contactless payment"
                     slot={
@@ -1105,8 +1101,8 @@ export default function TempoPage() {
             title: "Validation",
             body: (
               <>
-                <Insight>The manager who said it was the restaurant of the future — and meant it as a compliment</Insight>
-                <p>We tested Tempo with Brian, manager at STK, who evaluated the full system across all three modules. His feedback validated the core design decisions and surfaced one honest open question about TempoChime — which we&rsquo;ve carried into the future vision.</p>
+                <Insight>The manager who said it was the restaurant of the future, and meant it as a compliment</Insight>
+                <p>We tested Tempo with Brian, manager at STK, who evaluated the full system across all three modules. His feedback validated the core design decisions and surfaced one honest open question about TempoChime, which we&rsquo;ve carried into the future vision.</p>
                 <QuoteRow quotes={[
                   {
                     text: <>&ldquo;The ordering — I love that ... definitely restaurant of the future ... I like being able to change or modify it by pen or actual selection ... and recognizing someone&rsquo;s writing.&rdquo;</>,
@@ -1140,14 +1136,14 @@ export default function TempoPage() {
             body: (
               <>
                 <h4>Future vision</h4>
-                <p>Tempo is designed to be built in phases: a mobile software version first, then dedicated hardware, then a fully integrated system — with a next-generation Tempo 2.0 on the horizon.</p>
+                <p>Tempo is designed to be built in phases: a mobile software version first, then dedicated hardware, then a fully integrated system, with a next-generation Tempo 2.0 on the horizon.</p>
                 <figure className="tp-fig tp-fig--future">
                   <img loading="lazy" src="/images/tempo/tempo-future-timeline.svg" alt="Tempo future vision timeline" className="tp-fig-img" />
                 </figure>
 
                 <Rule />
 
-                <p>The brief from NCR Voyix was open-ended: reimagine the restaurant of the future. We started broad &mdash; fast food, small businesses, high-end dining &mdash; and I was initially drawn to automation in fast food. It felt exciting. Then I realized it was also the most obvious answer, the one everyone would reach for. The more interesting constraint was somewhere else.</p>
+                <p>The brief from NCR Voyix was open-ended: reimagine the restaurant of the future. We started broad (fast food, small businesses, high-end dining) and I was initially drawn to automation in fast food. It felt exciting. Then I realized it was also the most obvious answer, the one everyone would reach for. The more interesting constraint was somewhere else.</p>
                 <p style={{ marginTop: "1.25em" }}>What our research surfaced was that high-end dining was quietly struggling. Inflation had thinned margins, labor had become harder to retain, and the thing that makes fine dining worth the price &mdash; the service &mdash; is entirely human. You can&rsquo;t replace that with a robot without destroying the experience you&rsquo;re selling. That&rsquo;s what made the design problem genuinely hard, and genuinely interesting.</p>
                 <p style={{ marginTop: "1.25em" }}>What we built was an integrated system, not a single terminal. The existing POS experience was essentially tab-clicking &mdash; functional, but friction-heavy and disconnected from how service actually flows. Tempo replaced that with interactions that feel natural: voice-to-text, handwriting recognition, AI-coordinated task distribution across the floor. Each module works independently but functions as a whole, keeping the dining room in sync without ever surfacing the technology to the guest.</p>
                 <p style={{ marginTop: "1.25em" }}>It was also the beginning of the AI explosion, and there was something exciting about designing at that moment &mdash; figuring out where AI could genuinely reduce friction versus where it would just get in the way of what makes the experience premium in the first place.</p>
