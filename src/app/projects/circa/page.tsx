@@ -619,7 +619,7 @@ export default function CircaPage() {
           top: calc(50vh - 280px);
           display: flex;
           flex-direction: column;
-          gap: 16px;
+          gap: 8px;
         }
 
         /* Title above diagram */
@@ -630,6 +630,14 @@ export default function CircaPage() {
           letter-spacing: 0.07em;
           text-transform: uppercase;
           color: var(--text-tertiary);
+          margin: 0 0 6px;
+          text-align: center;
+        }
+        .fscroll-subtitle {
+          font-family: var(--body);
+          font-size: 14px;
+          color: var(--text-secondary);
+          line-height: 1.75;
           margin: 0 0 10px;
           text-align: center;
         }
@@ -690,7 +698,8 @@ export default function CircaPage() {
         }
 
         /* Description text below card */
-        .fscroll-desc-wrap { position: relative; min-height: 48px; }
+        .fscroll-desc-wrap { position: relative; min-height: 48px; margin-top: 8px; }
+        .fscroll-desc-wrap--top { margin-top: -4px; margin-bottom: 16px; }
         .fscroll-desc {
           position: absolute;
           inset: 0;

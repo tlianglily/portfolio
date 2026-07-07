@@ -163,6 +163,15 @@ export function FlowScroller() {
         {/* Title */}
         <p className="fscroll-title">Redesigned Workflow</p>
 
+        {/* Subtitle — fades with scroll */}
+        <div className="fscroll-desc-wrap fscroll-desc-wrap--top">
+          {PHASES.map((p, i) => (
+            <p key={i} className={"fscroll-desc" + (i === active ? " is-active" : "")}>
+              {p.description}
+            </p>
+          ))}
+        </div>
+
         {/* Card */}
         <div ref={cardRef} className="fscroll-card">
           <div className="fscroll-clip">
@@ -189,14 +198,6 @@ export function FlowScroller() {
           </div>
         </div>
 
-        {/* Description */}
-        <div className="fscroll-desc-wrap">
-          {PHASES.map((p, i) => (
-            <p key={i} className={"fscroll-desc" + (i === active ? " is-active" : "")}>
-              {p.description}
-            </p>
-          ))}
-        </div>
 
       </div>
     </div>

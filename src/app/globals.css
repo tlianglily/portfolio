@@ -172,7 +172,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ── Image lightbox ──────────────────────────────────────────── */
-img[data-lightbox] { cursor: zoom-in; }
+@media (max-width: 768px) {
+  img[data-lightbox] { cursor: zoom-in; }
+}
 
 /* ── Homepage project cards ─────────────────────────────────── */
 
