@@ -4,6 +4,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 import { ImageLightbox } from "@/components/ImageLightbox";
+import { Analytics } from "@vercel/analytics/next";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://lilyliang.design";
 
@@ -61,6 +62,7 @@ export default function RootLayout({
         <Footer />
         <BackToTop />
         <ImageLightbox />
+        <Analytics />
       </body>
     </html>
   );
