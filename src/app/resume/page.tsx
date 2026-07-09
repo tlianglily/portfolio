@@ -67,13 +67,13 @@ export default function Resume() {
 
         {/* Experience */}
         <Section label="Experience" num="02">
-          <EntryRow date="Summer 2025" place="Remote" title="TopProduct" sub="Co-Founder" fade>
+          <EntryRow date="Dec 2024 — Sep 2025" place="Remote" title="TopProduct" sub="Co-Founder" fade>
             <ul className="entry-bullets">
               <li>Built and beta-tested a web-based PM interview prep MVP featuring AI mentor feedback, role-specific practice modules, timed exercises, difficulty ratings, and community answer comparison</li>
               <li>Synthesized beta feedback and usage data to evaluate product-market fit, then led the decision to sunset the platform based on retention signals</li>
             </ul>
           </EntryRow>
-          <EntryRow date="2023 — Present" place="" title="Jaguar Signage" sub="Product & Sales Representative">
+          <EntryRow date="May 2023 — Present" place="" title="Sichuan Jaguar Sign Express Co.,Ltd" sub="Product & Sales Representative">
             <ul className="entry-bullets">
               <li>Represented Jaguar Signage at ISA International Sign Expo in Las Vegas and Orlando, leading product demos, sales conversations, and distributor outreach for B2B signage clients</li>
             </ul>
